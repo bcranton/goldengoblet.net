@@ -20,7 +20,11 @@
     font-family: sega;
     src: URL('fonts/sega.ttf') format('truetype');
 }
-  
+@font-face {
+    font-family: switch-blade-roman;
+    src: URL('fonts/switch-blade-roman.ttf') format('truetype');
+}
+
 #subtitle-spelunky {
     font-family: 'Tekton-Bold';
     font-size: 3em;
@@ -55,6 +59,12 @@
     font-family: 'sega';
     font-size: 4em;
     color: #DAB027;
+}
+
+#subtitle-medals {
+    font-family: 'switch-blade-roman';
+    font-size: 4em;
+    color: black;
 }
 
 .first {
@@ -115,6 +125,9 @@
 #sega-bg {
     background-color: #000419;
 }
+#medals-bg {
+    background-color: rgb(212,175,55);
+}
 a {
     color: inherit;
 }
@@ -126,5 +139,20 @@ a:hover {
 .navbar {
     font-size: 1.25em;
 }
+a.nav-link[href="medals.html"]:not(.active) {
+  color: rgb(212,175,55);
+}
 
+.table td, .table th {
+  text-align: center;
+}
 
+#medals-bg .medals {
+  font-size: 1.4em;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(10, max-content);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+}
