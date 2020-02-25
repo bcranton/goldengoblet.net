@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Tekton-Bold;
+    src: url("fonts/Tekton-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Bender-Bold;
+    src: url("fonts/Bender-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: coolvetica;
+    src: URL('fonts/coolvetica\ rg.ttf') format('truetype');
+  }
+  
+@font-face {
+    font-family: hl45;
+    src: URL('fonts/hl45.ttf') format('truetype');
+  }
+@font-face {
+    font-family: sega;
+    src: URL('fonts/sega.ttf') format('truetype');
+}
+  
+#subtitle-spelunky {
+    font-family: 'Tekton-Bold';
+    font-size: 3em;
+    color: #d9aa5a;
+}
+
+#subtitle-tarkov {
+    font-family: 'Bender-Bold';
+    font-size: 3em;
+    color: white;
+}
+
+#subtitle-hitman {
+    font-family: 'coolvetica';
+    font-size: 3em;
+    color: white;
+}
+
+#subtitle-pubg {
+    font-family: 'hl45';
+    font-size: 4em;
+    color: #c56c00;
+}
+
+#subtitle-spire {
+    font-family: 'Kreon', serif;
+    font-size: 4em;
+    color: #DAB027;
+}
+
+#subtitle-sega {
+    font-family: 'sega';
+    font-size: 4em;
+    color: #DAB027;
+}
+
+#first {
+    color: gold;
+    font-weight: bold;
+}
+
+#second {
+    color: silver;
+    font-weight: bold;
+}
+
+#third {
+    color: #CD7F32;
+    font-weight: bold;
+}
+
+#points {
+    color: #55DB26;
+    font-weight: bold;
+}
+
+#footnote {
+    color: white;
+    font-size: .7em;
+}
+#credit-link:link {
+    color: white;
+    opacity: .6;
+    font-size: .75em;
+}
+#credit-link:visited {
+    color: white;
+}
+
+#credit-link:hover {
+    text-decoration: none;
+    color: white;
+    opacity: .95;
+}
+#spire-bg {
+    background-color: #001B21;
+}
+#pubg-bg {
+    background-color: #150900;
+}
+
+#hitman-bg {
+    background-color: #28050B;
+}
+
+#tarkov-bg {
+    background-color: #1A1A1A;
+}
+#spelunky-bg {
+    background-color: #000419;
+}
+#sega-bg {
+    background-color: #000419;
+}
+a {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit
+}
+
+.navbar {
+    font-size: 1.25em;
+}
+
+
