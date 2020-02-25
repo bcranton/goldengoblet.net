@@ -57,22 +57,22 @@
     color: #DAB027;
 }
 
-#first {
+.first {
     color: gold;
     font-weight: bold;
 }
 
-#second {
+.second {
     color: silver;
     font-weight: bold;
 }
 
-#third {
+.third {
     color: #CD7F32;
     font-weight: bold;
 }
 
-#points {
+.points {
     color: #55DB26;
     font-weight: bold;
 }
