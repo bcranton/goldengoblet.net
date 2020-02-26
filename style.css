@@ -156,3 +156,8 @@ a.nav-link[href="medals.html"]:not(.active) {
   justify-content: center;
   align-content: center;
 }
+
+#medal-totals {
+    font-weight: bold;
+    font-size: 1.1em;
+}
