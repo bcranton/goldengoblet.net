@@ -150,7 +150,7 @@ a.nav-link[href="medals.html"]:not(.active) {
 #medals-bg .medals {
   font-size: 1.4em;
   grid-gap: 10px;
-  display: grid;
+  /* display: grid; */
   grid-template-columns: repeat(10, max-content);
   grid-template-rows: 1fr;
   justify-content: center;
