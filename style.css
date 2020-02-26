@@ -111,6 +111,23 @@
     opacity: 1;
 }
 
+.credit-link-light:link {
+    color: black;
+    opacity: .75;
+    font-size: .75em;
+}
+
+.credit-link-light:visited {
+    color: black;
+}
+
+.credit-link-light:hover {
+    text-decoration: none;
+    color: black;
+    opacity: 1;
+}
+
+
 #spire-bg {
     background-color: #001B21;
 }
