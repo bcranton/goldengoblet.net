@@ -91,16 +91,16 @@
     color: white;
     font-size: .7em;
 }
-#credit-link:link {
+.credit-link:link {
     color: white;
     opacity: .75;
     font-size: .75em;
 }
-#credit-link:visited {
+.credit-link:visited {
     color: white;
 }
 
-#credit-link:hover {
+.credit-link:hover {
     text-decoration: none;
     color: white;
     opacity: 1;
