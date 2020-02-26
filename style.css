@@ -93,7 +93,7 @@
 }
 #credit-link:link {
     color: white;
-    opacity: .6;
+    opacity: .75;
     font-size: .75em;
 }
 #credit-link:visited {
@@ -103,7 +103,7 @@
 #credit-link:hover {
     text-decoration: none;
     color: white;
-    opacity: .95;
+    opacity: 1;
 }
 #spire-bg {
     background-color: #001B21;
