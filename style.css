@@ -2,6 +2,7 @@
     font-family: Tekton-Bold;
     src: url("fonts/Tekton-Bold.otf") format("opentype");
 }
+
 @font-face {
     font-family: Bender-Bold;
     src: url("fonts/Bender-Bold.otf") format("opentype");
@@ -10,16 +11,18 @@
 @font-face {
     font-family: coolvetica;
     src: URL('fonts/coolvetica\ rg.ttf') format('truetype');
-  }
-  
+}
+
 @font-face {
     font-family: hl45;
     src: URL('fonts/hl45.ttf') format('truetype');
-  }
+}
+
 @font-face {
     font-family: sega;
     src: URL('fonts/sega.ttf') format('truetype');
 }
+
 @font-face {
     font-family: switch-blade-roman;
     src: URL('fonts/switch-blade-roman.ttf') format('truetype');
@@ -91,11 +94,13 @@
     color: white;
     font-size: .7em;
 }
+
 .credit-link:link {
     color: white;
     opacity: .75;
     font-size: .75em;
 }
+
 .credit-link:visited {
     color: white;
 }
@@ -105,9 +110,11 @@
     color: white;
     opacity: 1;
 }
+
 #spire-bg {
     background-color: #001B21;
 }
+
 #pubg-bg {
     background-color: #150900;
 }
@@ -119,15 +126,19 @@
 #tarkov-bg {
     background-color: #1A1A1A;
 }
+
 #spelunky-bg {
     background-color: #000419;
 }
+
 #sega-bg {
     background-color: #000419;
 }
+
 #medals-bg {
-    background-color: rgb(212,175,55);
+    background-color: rgb(212, 175, 55);
 }
+
 a {
     color: inherit;
 }
@@ -139,22 +150,23 @@ a:hover {
 .navbar {
     font-size: 1.25em;
 }
+
 a.nav-link[href="medals.html"]:not(.active) {
-  color: rgb(212,175,55);
+    color: rgb(212, 175, 55);
 }
 
 .table td, .table th {
-  text-align: center;
+    text-align: center;
 }
 
 #medals-bg .medals {
-  font-size: 1.4em;
-  grid-gap: 10px;
-  /* display: grid; */
-  grid-template-columns: repeat(10, max-content);
-  grid-template-rows: 1fr;
-  justify-content: center;
-  align-content: center;
+    font-size: 1.4em;
+    grid-gap: 10px;
+    /* display: grid; */
+    grid-template-columns: repeat(10, max-content);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-content: center;
 }
 
 #medal-totals {
