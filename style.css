@@ -28,6 +28,11 @@
     src: URL('fonts/switch-blade-roman.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: Pretendo;
+    src: URL('fonts/Pretendo.ttf') format('truetype');
+}
+
 #subtitle-spelunky {
     font-family: 'Tekton-Bold';
     font-size: 3em;
@@ -60,6 +65,12 @@
 
 #subtitle-sega {
     font-family: 'sega';
+    font-size: 4em;
+    color: #DAB027;
+}
+
+#subtitle-nintendo {
+    font-family: 'Pretendo';
     font-size: 4em;
     color: #DAB027;
 }
@@ -149,6 +160,10 @@
 }
 
 #sega-bg {
+    background-color: #000419;
+}
+
+#nintendo-bg {
     background-color: #000419;
 }
 
