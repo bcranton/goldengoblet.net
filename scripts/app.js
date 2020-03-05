@@ -10,33 +10,37 @@
  * */
 
 //init variables
-var firstCount = 0, secondCount = 0, thirdCount = 0;
+var firstCount = 0, secondCount = 0, thirdCount = 0, points = 0, pointsTemp = 0;
 
 var playerNameAndLink = '';
 
 //loop through each column that contains scores.  First column contains episode # so we skip it.
 for (var i = 2; i <= 4; i++) {
-    //playerNameAndLink = $('table:nth-child(3) > thead > tr > th:nth-child(' + i + ') > a').clone();
+    playerNameAndLink = $('table:nth-child(3) > thead > tr > th:nth-child(' + i + ') > a').clone();
     //go through each row and tally up the scores.
     $('table:nth-child(3) > tbody > tr > td:nth-child(' + i + ')').each(function (a, b) {
         if ($(this).hasClass('first')) {
             firstCount++;
         }
-        if ($(this).hasClass('second')) {
+        else if ($(this).hasClass('second')) {
             secondCount++;
         }
-        if ($(this).hasClass('third')) {
+        else if ($(this).hasClass('third')) {
             thirdCount++;
         }
-        //$('table:nth-child(4) > thead > tr > th:nth-child(' + i + ')').html(playerNameAndLink);
-
+        if (!$(this).hasClass("comment")) {
+            pointsTemp += parseFloat(($(this).text().replace(",","")));
+            points = pointsTemp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        $('table:nth-child(4) > thead > tr > th:nth-child(' + i + ')').html(playerNameAndLink);
         //insert the scores into the relevant medal tally
         $('table:nth-child(4) > tbody > tr:nth-child(1) > td:nth-child(' + i + ')').text(thirdCount);
         $('table:nth-child(4) > tbody > tr:nth-child(2) > td:nth-child(' + i + ')').text(secondCount);
         $('table:nth-child(4) > tbody > tr:nth-child(3) > td:nth-child(' + i + ')').text(firstCount);
-
+        $('table:nth-child(4) > tbody > tr:nth-child(4) > td:nth-child(' + i + ')').text(points);
+        
 
     })
     //reset the medal count for the next player
-    firstCount = 0, secondCount = 0, thirdCount = 0;
+    firstCount = 0, secondCount = 0, thirdCount = 0, points = 0, pointsTemp = 0;
 }
