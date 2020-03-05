@@ -29,7 +29,10 @@ for (var i = 2; i <= 4; i++) {
             thirdCount++;
         }
         if (!$(this).hasClass("comment")) {
+            // If the row is not part of the "comment" class
+            // Assign pointsTemp to itself plus the value of the row, with any commas removed, and converted to a floating point
             pointsTemp += parseFloat(($(this).text().replace(",","")));
+            // Points is equal to pointsTemp, but uses this regex to add the commas back into the number
             points = pointsTemp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
         $('table:nth-child(4) > thead > tr > th:nth-child(' + i + ')').html(playerNameAndLink);
