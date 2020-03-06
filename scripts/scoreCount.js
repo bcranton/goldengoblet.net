@@ -10,12 +10,12 @@
  * */
 
 //init variables
-var firstCount = 0, secondCount = 0, thirdCount = 0, points = 0, pointsTemp = 0;
+let firstCount = 0, secondCount = 0, thirdCount = 0, points = 0, pointsTemp = 0;
 
-var playerNameAndLink = '';
+let playerNameAndLink = '';
 
 //loop through each column that contains scores.  First column contains episode # so we skip it.
-for (var i = 2; i <= 4; i++) {
+for (let i = 2; i <= 4; i++) {
     playerNameAndLink = $('table:nth-child(3) > thead > tr > th:nth-child(' + i + ') > a').clone();
     //go through each row and tally up the scores.
     $('table:nth-child(3) > tbody > tr > td:nth-child(' + i + ')').each(function (a, b) {

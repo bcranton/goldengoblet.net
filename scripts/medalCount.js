@@ -1,10 +1,10 @@
 // Automatically calculates the total medals on the bottom row on medals.html
 
-//init variables
-var firstCount = 0, secondCount = 0, thirdCount = 0;
+//init letiables
+let firstCount = 0, secondCount = 0, thirdCount = 0;
 
 //loop through each column that contains scores.  First column contains episode # so we skip it.
-for (var i = 1; i <= 3; i++) {
+for (let i = 1; i <= 3; i++) {
     //go through each row and tally up the scores.
     $('table:nth-child(3) > tbody > tr > td:nth-child(' + i + ') > i').each(function (a, b) {
         if ($(this).hasClass('first')) {
