@@ -139,6 +139,12 @@
     font-size: .7em;
 }
 
+#points-calc {
+    border-top: 2px solid black;
+    color: white;
+    font-size: .7em;
+}
+
 .credit-link:link {
     color: white;
     opacity: .75;
