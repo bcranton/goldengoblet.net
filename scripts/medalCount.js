@@ -20,6 +20,9 @@ for (let i = 1; i <= 3; i++) {
     })
     $('table:nth-child(3) > tbody:nth-child(4) > tr > td:nth-child(' + i + ')').html(thirdCount + 'x <i class="fas fa-medal third"></i>&nbsp;&nbsp;&nbsp;&nbsp;' + secondCount + 'x <i class="fas fa-medal second"></i>&nbsp;&nbsp;&nbsp;&nbsp;' + firstCount + 'x <i class="fas fa-medal first"></i>');
 
+    score = firstCount * 3 + secondCount * 2 + thirdCount;
+    $('table:nth-child(3) > tbody:nth-child(4) > tr:nth-child(2) > td:nth-child(' + i + ')').html(score + 'pts');
+
     firstCount = 0, secondCount = 0, thirdCount = 0
 
 }
