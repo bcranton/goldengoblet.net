@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
 @font-face {
     font-family: Tekton-Bold;
     src: url("fonts/Tekton-Bold.otf") format("opentype");
@@ -79,6 +81,18 @@
     font-family: 'switch-blade-roman';
     font-size: 4em;
     color: black;
+}
+
+.goblet-win {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: gold;
+
+}
+
+.goblet-game {
+    font-size: 1em;
+    color: white;
 }
 
 .first {
@@ -205,3 +219,4 @@ a.nav-link[href="medals.html"]:not(.active) {
     font-weight: bold;
     font-size: 1.15em;
 }
+
