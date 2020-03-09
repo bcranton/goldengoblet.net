@@ -97,6 +97,10 @@
 
 }
 
+.channels {
+    font-size: 1.1em;
+}
+
 .first {
     color: gold;
     font-weight: bold;
