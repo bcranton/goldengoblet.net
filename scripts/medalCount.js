@@ -1,6 +1,6 @@
 // Automatically calculates the total medals on the bottom row on medals.html
 
-//init letiables
+//init variables
 let danScore = 0, malfScore = 0, NLScore = 0;
 
 //loop through each column that contains scores.  First column contains episode # so we skip it.
@@ -40,7 +40,7 @@ for (let i = 1; i <= 3; i++) {
 }
 
 
-
+// Next chunk of code compares everyone's point to determine ranking
 if (danScore >= malfScore && danScore >= NLScore) {
     $('table:nth-child(3) > tbody:nth-child(4) > tr:nth-child(2) > td:nth-child(1)').html('<i class="fas fa-trophy first"></i> ' + danScore + ' pts');
 }
