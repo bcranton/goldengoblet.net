@@ -8,7 +8,6 @@ for (let i = 1; i <= 3; i++) {
     let firstCount = 0, secondCount = 0, thirdCount = 0;
     //go through each row and tally up the scores.
     $('table:nth-child(3) > tbody:nth-child(3) > tr > td:nth-child(' + i + ') > i').each(function (a, b) {
-        console.log($(this))
         if ($(this).hasClass('first')) {
             firstCount++;
         }
