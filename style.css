@@ -35,6 +35,11 @@
     src: URL('fonts/Pretendo.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: snes;
+    src: URL('fonts/snes.ttf') format('truetype');
+}
+
 #subtitle-spelunky {
     font-family: 'Tekton-Bold';
     font-size: 3em;
@@ -76,6 +81,14 @@
     font-size: 4em;
     color: #DAB027;
 }
+
+#subtitle-snes {
+    font-family: 'snes';
+    font-size: 5em;
+    color: #DAB027;
+    letter-spacing: 8px;
+}
+
 
 #subtitle-medals {
     font-family: 'switch-blade-roman';
@@ -184,6 +197,10 @@
 }
 
 #nintendo-bg {
+    background-color: #202020;
+}
+
+#snes-bg {
     background-color: #202020;
 }
 
