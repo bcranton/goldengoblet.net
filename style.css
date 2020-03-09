@@ -235,6 +235,7 @@ a.nav-link[href="medals.html"]:not(.active) {
 }
 
 #medals-bg .medals {
+    border-top: 2px solid black;
     font-size: 1.4em;
     grid-gap: 10px;
     /* display: grid; */
@@ -248,4 +249,3 @@ a.nav-link[href="medals.html"]:not(.active) {
     font-weight: bold;
     font-size: 1.15em;
 }
-
