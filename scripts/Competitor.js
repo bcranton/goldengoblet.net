@@ -13,17 +13,18 @@ class Competitor {
 }
 
 var competitors = [
+	{
+		"Name":"Dan Gheesling",
+		"Handle":"dangheesling",
+		"Gold":9,
+		"Silver":13,
+		"Bronze":24,
+		"Wins":[
+			"SEGA Classics",
+			"NES Classics"
+		]
+	},
 	
-		{	"Name":"Ryan Letourneau",
-			"Handle":"Northernlion",
-			"Gold":19,
-			"Silver":17,
-			"Bronze":10,
-			"Wins":[
-				"Spelunky",
-				"Slay the Spire"
-			]
-		},
 		{
 			"Name":"Michael AL Fox",
 			"Handle":"MALF",
@@ -35,24 +36,24 @@ var competitors = [
 				"Hitman 2"
 			]
 		},
-		{
-			"Name":"Dan Gheesling",
-			"Handle":"dangheesling",
-			"Gold":9,
-			"Silver":13,
-			"Bronze":24,
-			"Wins":[
-				"SEGA Classics",
-				"NES Classics"
-			]
-		}
+		{	"Name":"Ryan Letourneau",
+		"Handle":"Northernlion",
+		"Gold":19,
+		"Silver":17,
+		"Bronze":10,
+		"Wins":[
+			"Spelunky",
+			"Slay the Spire"
+		]
+	}
+		
 
 	]
 
 
-var nl = new Competitor(competitors[0]);
+var dan = new Competitor(competitors[0]);
 var malf = new Competitor(competitors[1]);
-var dan = new Competitor(competitors[2]);
+var nl = new Competitor(competitors[2]);
 
 const allCompetitors = [dan,malf,nl];
 for (c of allCompetitors) {
