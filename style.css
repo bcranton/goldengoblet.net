@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
-
 @font-face {
     font-family: Tekton-Bold;
     src: url("fonts/Tekton-Bold.otf") format("opentype");
@@ -89,7 +88,6 @@
     letter-spacing: 8px;
 }
 
-
 #subtitle-medals {
     font-family: 'switch-blade-roman';
     font-size: 4em;
@@ -100,7 +98,6 @@
     font-weight: bold;
     font-size: 1.7em;
     color: gold;
-
 }
 
 .goblet-game {
@@ -176,7 +173,6 @@
     color: black;
     opacity: 1;
 }
-
 
 #spire-bg {
     background-color: #001B21;
