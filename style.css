@@ -222,10 +222,7 @@ a:hover {
     font-size: 1.25em;
 }
 
-a.nav-link[href="medals.html"]:not(.active) {
-    color: rgb(212, 175, 55);
-}
-a.nav-link[href="medals"]:not(.active) {
+#medalsLink:not(.active) {
     color: rgb(212, 175, 55);
 }
 
