@@ -35,10 +35,13 @@
 }
 
 @font-face {
-    font-family: snes;
-    src: URL('fonts/snes.ttf') format('truetype');
-}
+    font-family: 'snesitalic';
+    src: url('fonts/snes-webfont.woff2') format('woff2'),
+         url('fonts/snes-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 #subtitle-spelunky {
     font-family: 'Tekton-Bold';
     font-size: 3em;
@@ -82,9 +85,8 @@
 }
 
 #subtitle-snes {
-    font-family: 'snes';
+    font-family: 'snesitalic';
     font-size: 5em;
-    font-style: italic;
     color: #DAB027;
     letter-spacing: 8px;
 }
