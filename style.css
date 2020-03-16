@@ -59,7 +59,6 @@
     letter-spacing: 13px;
 }
 
-
 #subtitle-pubg {
     font-family: 'hl45';
     font-size: 4em;
@@ -111,7 +110,6 @@
 
 .channels {
     font-size: 1.1em;
-    /* letter-spacing: .5px; */
 }
 
 .first {
@@ -188,6 +186,7 @@
 #hitman-bg {
     background-color: #28050B;
 }
+
 #hitman-bg2 {
     background-color: #4C1922;
 }
@@ -240,7 +239,6 @@ a:hover {
     border-top: 2px solid black;
     font-size: 1.4em;
     grid-gap: 10px;
-    /* display: grid; */
     grid-template-columns: repeat(10, max-content);
     grid-template-rows: 1fr;
     justify-content: center;
