@@ -29,10 +29,10 @@
     src: URL('fonts/switch-blade-roman.ttf') format('truetype');
 }
 
-@font-face {
+/* @font-face {
     font-family: Pretendo;
     src: URL('fonts/Pretendo.ttf') format('truetype');
-}
+} */
 
 #subtitle-spelunky {
     font-family: 'Tekton-Bold';
@@ -79,7 +79,7 @@
 }
 
 #subtitle-nintendo {
-    font-family: 'Pretendo';
+    /* font-family: 'Pretendo'; */
     font-size: 4em;
     color: #DAB027;
 }
