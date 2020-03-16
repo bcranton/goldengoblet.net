@@ -39,7 +39,7 @@
     src: url('fonts/snes-webfont.woff2') format('woff2'),
          url('fonts/snes-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
 }
 #subtitle-spelunky {
