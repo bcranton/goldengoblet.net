@@ -18,7 +18,7 @@ var competitors = [
 		"Handle": "dangheesling",
 		"Gold": 10,
 		"Silver": 14,
-		"Bronze": 24,
+		"Bronze": 25,
 		"Wins": [
 			"SEGA Classics",
 			"NES Classics"
@@ -28,7 +28,7 @@ var competitors = [
 	{
 		"Name": "Michael AL Fox",
 		"Handle": "MALF",
-		"Gold": 20,
+		"Gold": 21,
 		"Silver": 15,
 		"Bronze": 13,
 		"Wins": [
@@ -40,7 +40,7 @@ var competitors = [
 		"Name": "Ryan Letourneau",
 		"Handle": "Northernlion",
 		"Gold": 21,
-		"Silver": 17,
+		"Silver": 18,
 		"Bronze": 10,
 		"Wins": [
 			"Spelunky",
