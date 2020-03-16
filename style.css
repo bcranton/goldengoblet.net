@@ -84,6 +84,7 @@
 #subtitle-snes {
     font-family: 'snes';
     font-size: 5em;
+    font-style: italic;
     color: #DAB027;
     letter-spacing: 8px;
 }
