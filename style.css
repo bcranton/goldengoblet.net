@@ -60,6 +60,14 @@
     color: white;
 }
 
+#subtitle-hitman2 {
+    font-family: 'coolvetica';
+    font-size: 3em;
+    color: gold;
+    letter-spacing: 13px;
+}
+
+
 #subtitle-pubg {
     font-family: 'hl45';
     font-size: 4em;
@@ -187,6 +195,9 @@
 
 #hitman-bg {
     background-color: #28050B;
+}
+#hitman-bg2 {
+    background-color: #4C1922;
 }
 
 #tarkov-bg {
