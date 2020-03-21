@@ -17,8 +17,8 @@ var competitors = [
 		"Name": "Dan Gheesling",
 		"Handle": "dangheesling",
 		"Gold": 11,
-		"Silver": 16,
-		"Bronze": 28,
+		"Silver": 17,
+		"Bronze": 27,
 		"Wins": [
 			"SEGA Classics",
 			"NES Classics"
@@ -40,8 +40,8 @@ var competitors = [
 		"Name": "Ryan Letourneau",
 		"Handle": "Northernlion",
 		"Gold": 22,
-		"Silver": 21,
-		"Bronze": 12,
+		"Silver": 20,
+		"Bronze": 13,
 		"Wins": [
 			"Spelunky",
 			"Slay the Spire",
