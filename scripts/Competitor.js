@@ -33,7 +33,8 @@ var competitors = [
 		"Bronze": 13,
 		"Wins": [
 			"Escape From Tarkov",
-			"Hitman 2"
+			"Hitman 2 (Week 1)",
+			"Hitman 2 (Week 2)"
 		]
 	},
 	{
