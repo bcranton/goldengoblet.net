@@ -88,6 +88,12 @@
     color: #DAB027;
     letter-spacing: 6px;
 }
+#subtitle-escape {
+    font-size: 4em;
+    font-weight: bold;
+    color: #DAB027;
+    letter-spacing: 6px;
+}
 
 #subtitle-medals {
     font-family: 'switch-blade-roman';
@@ -210,6 +216,9 @@
 
 #snes-bg {
     background-color: #202020;
+}
+#escape-bg {
+    background-color: #45333B;
 }
 
 #medals-bg {
