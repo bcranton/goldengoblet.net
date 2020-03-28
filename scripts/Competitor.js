@@ -18,7 +18,7 @@ var competitors = [
 		"Handle": "dangheesling",
 		"Gold": 12,
 		"Silver": 16,
-		"Bronze": 30,
+		"Bronze": 31,
 		"Wins": [
 			"SEGA Classics",
 			"NES Classics"
@@ -28,20 +28,21 @@ var competitors = [
 	{
 		"Name": "Michael AL Fox",
 		"Handle": "MALF",
-		"Gold": 28,
+		"Gold": 29,
 		"Silver": 17,
 		"Bronze": 13,
 		"Wins": [
 			"Escape From Tarkov",
 			"Hitman 2 (Week 1)",
-			"Hitman 2 (Week 2)"
+			"Hitman 2 (Week 2)",
+			"Escape Rooms"
 		]
 	},
 	{
 		"Name": "Ryan Letourneau",
 		"Handle": "Northernlion",
 		"Gold": 23,
-		"Silver": 22,
+		"Silver": 23,
 		"Bronze": 13,
 		"Wins": [
 			"Spelunky",
