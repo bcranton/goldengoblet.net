@@ -95,6 +95,13 @@
     letter-spacing: 6px;
 }
 
+#subtitle-mario {
+    font-size: 3em;
+    font-weight: bold;
+    color: #DAB027;
+    letter-spacing: 4px;
+}
+
 #subtitle-medals {
     font-family: 'switch-blade-roman';
     font-size: 4em;
@@ -226,6 +233,9 @@
 
 #guts-bg {
     background-color: #1B2631;
+}
+#mario-bg {
+    background-color: #323232;
 }
 
 #medals-bg {
