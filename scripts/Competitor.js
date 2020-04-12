@@ -28,8 +28,8 @@ var competitors = [
 	{
 		"Name": "Michael AL Fox",
 		"Handle": "MALF",
-		"Gold": 36,
-		"Silver": 21,
+		"Gold": 35,
+		"Silver": 22,
 		"Bronze": 16,
 		"Wins": [
 			"Escape From Tarkov",
