@@ -17,13 +17,13 @@ for (c of allCompetitors) {
         document.querySelectorAll(`table:nth-child(3) > tbody:nth-child(4) > tr > td:nth-child(${allCompetitors.indexOf(c)+1}) > span > span`)[p].style = "padding: 1.5%"
     }
     var body = ''
-    for (let b = 0; b < c.bronze-1; b++) {
+    for (let b = 0; b < c.bronze; b++) {
         body += '<i class="fas fa-medal third"></i>';
     }
-    for (let s = 0; s < c.silver-1; s++) {
+    for (let s = 0; s < c.silver; s++) {
         body += '<i class="fas fa-medal second"></i>';
     }
-    for (let g = 0; g < c.gold-1; g++) {
+    for (let g = 0; g < c.gold; g++) {
         body += '<i class="fas fa-medal first"></i>';
     }
     document.querySelector(`#medals-bg > div > table > tbody:nth-child(3) > tr > td:nth-child(${allCompetitors.indexOf(c)+1})`).innerHTML = body;
