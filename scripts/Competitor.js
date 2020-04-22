@@ -29,8 +29,8 @@ var competitors = [
 		"Name": "Michael AL Fox",
 		"Handle": "MALF",
 		"Gold": 37,
-		"Silver": 28,
-		"Bronze": 17,
+		"Silver": 27,
+		"Bronze": 18,
 		"Wins": [
 			"Escape From Tarkov",
 			"Hitman 2 (Week 1)",
@@ -42,8 +42,8 @@ var competitors = [
 		"Name": "Ryan Letourneau",
 		"Handle": "Northernlion",
 		"Gold": 32,
-		"Silver": 33,
-		"Bronze": 17,
+		"Silver": 34,
+		"Bronze": 16,
 		"Wins": [
 			"Spelunky",
 			"Slay the Spire",
