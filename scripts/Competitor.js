@@ -16,7 +16,7 @@ var competitors = [
 	{
 		"Name": "Dan Gheesling",
 		"Handle": "dangheesling",
-		"Gold": 18,
+		"Gold": 19,
 		"Silver": 18,
 		"Bronze": 46,
 		"Wins": [
@@ -30,7 +30,7 @@ var competitors = [
 		"Handle": "MALF",
 		"Gold": 37,
 		"Silver": 27,
-		"Bronze": 18,
+		"Bronze": 19,
 		"Wins": [
 			"Escape From Tarkov",
 			"Hitman 2 (Week 1)",
@@ -42,7 +42,7 @@ var competitors = [
 		"Name": "Ryan Letourneau",
 		"Handle": "Northernlion",
 		"Gold": 32,
-		"Silver": 34,
+		"Silver": 35,
 		"Bronze": 16,
 		"Wins": [
 			"Spelunky",
