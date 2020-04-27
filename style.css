@@ -101,6 +101,12 @@
     color: #DAB027;
     letter-spacing: 4px;
 }
+#subtitle-cod {
+    font-size: 3em;
+    font-weight: bold;
+    color: #DAB027;
+    letter-spacing: 4px;
+}
 
 #subtitle-medals {
     font-family: 'switch-blade-roman';
@@ -237,6 +243,10 @@
 #mario-bg {
     background-color: #323232;
 }
+#cod-bg {
+    background-color: #202020;
+}
+
 
 #medals-bg {
     background-color: rgb(212, 175, 55);
