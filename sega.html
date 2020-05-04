@@ -24,6 +24,14 @@
   <link href="https://fonts.googleapis.com/css?family=Kreon&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <title>Golden Goblet Standings</title>
+    <script lang="javascript">
+      $(document).ready(() => {if (window.location.hash == "#nospoiler") {
+        $("div table:first-of-type td")
+          .removeClass("first").removeClass("second").removeClass("third");
+        $("div table:first-of-type td a").text("watch");
+      $("div table:last-of-type").remove();
+      }});
+    </script>
 </head>
 
 <body id="sega-bg">
