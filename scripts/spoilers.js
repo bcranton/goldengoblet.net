@@ -3,7 +3,7 @@ $(document).ready(function () {
     if (window.localStorage.getItem("spoiler") != "show") {
         window.localStorage.setItem("spoiler", "hide");
         $('#hide-spoiler').addClass('active');
-        $('#show-spoiler').removeClass('active');
+        // $('#show-spoiler').removeClass('active');
         scoreCount()
 
     }
