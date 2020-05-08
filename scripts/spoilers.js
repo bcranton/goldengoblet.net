@@ -11,7 +11,7 @@ $(document).ready(function () {
     else if (window.localStorage.getItem("spoiler") == "show") {
         $('#show-spoiler').addClass('active');
         $('#hide-spoiler').removeClass('active');
-        $('.results strong').toggle();
+        $('.results #spoilerSpan').toggle();
         scoreCount()
 
     }
@@ -23,7 +23,7 @@ $(document).ready(function () {
 
     }
     $('.unit-toggler').change(function () {
-        $('.results strong').toggle();
+        $('.results #spoilerSpan').toggle();
         stateChange()
 
     })
@@ -49,7 +49,7 @@ function scoreCount() {
     for (let i = 2; i <= 4; i++) {
         playerNameAndLink = $('table:nth-child(3) > thead > tr > th:nth-child(' + i + ') > a').clone();
         //go through each row and tally up the scores.
-        $('table:nth-child(3) > tbody > tr > td:nth-child(' + i + ') > a > strong:nth-child(2)').each(function (a, b) {
+        $('table:nth-child(3) > tbody > tr > td:nth-child(' + i + ') > a > #spoilerSpan:nth-child(2)').each(function (a, b) {
             if ($(this).hasClass('first')) {
                 firstCount++;
             }
