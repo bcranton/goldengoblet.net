@@ -1,5 +1,14 @@
 $(document).ready(function () {
-    if (window.localStorage.getItem("spoiler") == "show") {
+
+    if (window.localStorage.getItem("spoiler") != "show") {
+        window.localStorage.setItem("spoiler", "hide");
+        $('#hide-spoiler').addClass('active');
+        $('#show-spoiler').removeClass('active');
+        scoreCount()
+
+    }
+
+    else if (window.localStorage.getItem("spoiler") == "show") {
         $('#show-spoiler').addClass('active');
         $('#hide-spoiler').removeClass('active');
         $('.results strong').toggle();
