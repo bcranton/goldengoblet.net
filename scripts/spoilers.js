@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $('.unit-toggler').change(function () {
+        $('.results #spoilerSpan').toggle();
+        stateChange()
+
+    })
 
     if (window.localStorage.getItem("spoiler") != "show") {
         window.localStorage.setItem("spoiler", "hide");
@@ -22,11 +27,6 @@ $(document).ready(function () {
         scoreCount()
 
     }
-    $('.unit-toggler').change(function () {
-        $('.results #spoilerSpan').toggle();
-        stateChange()
-
-    })
 });
 
 function stateChange() {
