@@ -1,11 +1,11 @@
-$(document).load(function () {
+$(document).on('load', function() {
     $('.unit-toggler').change(function () {
         $('.results #spoilerSpan').toggle();
         stateChange();
 
     })
 });    
-$(document).load(function () {
+$(document).on('load', function() {
     var spoilerValue = window.localStorage.getItem("spoiler")
 
     if (spoilerValue != "show") {
