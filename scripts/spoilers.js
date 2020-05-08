@@ -2,14 +2,14 @@ $(document).ready(function () {
 
     if (window.localStorage.getItem("spoiler") != "show") {
         window.localStorage.setItem("spoiler", "hide");
-        $('#hide-spoiler').addClass('active');
+        // $('#hide-spoiler').addClass('active');
         // $('#show-spoiler').removeClass('active');
         scoreCount()
 
     }
 
     else if (window.localStorage.getItem("spoiler") == "show") {
-        $('#show-spoiler').addClass('active');
+        // $('#show-spoiler').addClass('active');
         // $('#hide-spoiler').removeClass('active');
         $('.results #spoilerSpan').toggle();
         scoreCount()
@@ -17,12 +17,12 @@ $(document).ready(function () {
     }
     else {
         window.localStorage.setItem("spoiler", "hide");
-        $('#hide-spoiler').addClass('active');
+        // $('#hide-spoiler').addClass('active');
         // $('#show-spoiler').removeClass('active');
         scoreCount()
 
     }
-    $('.unit-toggler').change(function () {
+    $('.unit-toggler').click(function () {
         $('.results #spoilerSpan').toggle();
         stateChange()
     
