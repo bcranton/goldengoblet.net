@@ -1,9 +1,4 @@
 $(document).ready(function () {
-    $('.unit-toggler').change(function () {
-        $('.results #spoilerSpan').toggle();
-        stateChange()
-
-    })
 
     if (window.localStorage.getItem("spoiler") != "show") {
         window.localStorage.setItem("spoiler", "hide");
@@ -39,6 +34,12 @@ function stateChange() {
     scoreCount()
 
 }
+
+$('.unit-toggler').change(function () {
+    $('.results #spoilerSpan').toggle();
+    stateChange()
+
+})
 
 function scoreCount() {
     let firstCount = 0, secondCount = 0, thirdCount = 0, points = 0, pointsTemp = 0;
