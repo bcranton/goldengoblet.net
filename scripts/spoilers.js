@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     else if (window.localStorage.getItem("spoiler") == "show") {
         $('#show-spoiler').addClass('active');
-        $('#hide-spoiler').removeClass('active');
+        // $('#hide-spoiler').removeClass('active');
         $('.results #spoilerSpan').toggle();
         scoreCount()
 
@@ -18,7 +18,7 @@ $(document).ready(function () {
     else {
         window.localStorage.setItem("spoiler", "hide");
         $('#hide-spoiler').addClass('active');
-        $('#show-spoiler').removeClass('active');
+        // $('#show-spoiler').removeClass('active');
         scoreCount()
 
     }
