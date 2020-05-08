@@ -27,7 +27,7 @@ $(document).ready(function () {
         scoreCount()
 
     }
-});
+})
 
 function stateChange() {
     if (window.localStorage.getItem("spoiler") == "show") {
