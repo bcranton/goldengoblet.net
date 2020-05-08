@@ -1,43 +1,39 @@
+var spoilerValue = window.localStorage.getItem("spoiler")
+
 $(document).ready(function () {
 
-    if (window.localStorage.getItem("spoiler") != "show") {
-        window.localStorage.setItem("spoiler", "hide");
+    if (spoilerValue != "show") {
+        spoilerValue = "hide";
+        window.localStorage.setItem("spoiler", spoilerValue);
         $('#hide-spoiler').addClass('active');
-        // $('#show-spoiler').removeClass('active');
-        scoreCount()
+        scoreCount();
 
     }
 
-    else if (window.localStorage.getItem("spoiler") == "show") {
-        $('#show-spoiler').addClass('active');
-        // $('#hide-spoiler').removeClass('active');
-        $('.results #spoilerSpan').toggle();
-        scoreCount()
-
-    }
     else {
-        window.localStorage.setItem("spoiler", "hide");
-        $('#hide-spoiler').addClass('active');
-        // $('#show-spoiler').removeClass('active');
-        scoreCount()
+        $('#show-spoiler').addClass('active');
+        $('.results #spoilerSpan').toggle();
+        scoreCount();
 
     }
 })
 
 $('.unit-toggler').change(function () {
     $('.results #spoilerSpan').toggle();
-    stateChange()
+    stateChange();
 
 })
 
 function stateChange() {
-    if (window.localStorage.getItem("spoiler") == "show") {
-        window.localStorage.setItem("spoiler", "hide");
+    if (spoilerValue == "show") {
+        spoilerValue = "hide";
+        window.localStorage.setItem("spoiler", spoilerValue);
     }
     else {
-        window.localStorage.setItem("spoiler", "show");
+        spoilerValue = "show";
+        window.localStorage.setItem("spoiler", spoilerValue);
     }
-    scoreCount()
+    scoreCount();
 
 }
 
