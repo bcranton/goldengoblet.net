@@ -1,6 +1,6 @@
-
+var spoilerValue = window.localStorage.getItem("spoiler")
 $(document).ready(function () {
-    var spoilerValue = window.localStorage.getItem("spoiler")
+    
 
     if (spoilerValue != "show") {
         spoilerValue = "hide";
