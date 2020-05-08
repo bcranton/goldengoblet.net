@@ -24,14 +24,7 @@
   <link href="https://fonts.googleapis.com/css?family=Kreon&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <title>Golden Goblet Standings</title>
-    <script lang="javascript">
-      $(document).ready(() => {if (window.location.hash == "#nospoiler") {
-        $("div table:first-of-type td")
-          .removeClass("first").removeClass("second").removeClass("third");
-        $("div table:first-of-type td a").text("watch");
-      $("div table:last-of-type").remove();
-      }});
-    </script>
+
 </head>
 
 <body id="sega-bg">
@@ -72,7 +65,16 @@
         </li>
       </ul>
     </div>
-  </nav> <br>
+    <div class="btn-group btn-group-toggle unit-toggler" data-toggle="buttons">
+      <label class="btn btn-secondary btn-select" id="hide-spoiler">
+        <input type="radio" name="spoiler">Hide Spoilers
+      </label>
+      <label class="btn btn-secondary btn-select" id="show-spoiler">
+        <input type="radio" name="spoiler">Show Spoilers
+      </label>
+    </div>
+
+  </nav><br>
   <div class="container">
     <div id="logo" class="row justify-content-center">
       <img src="images/sega-logo7.png" class="img-fluid" alt="SEGA Classics Logo">
@@ -80,7 +82,7 @@
     <div id="subtitle-sega" class="row justify-content-center text-nowrap">
       Golden&nbsp;&nbsp;Goblet
     </div>
-    <table class="table table-dark">
+    <table class="table table-dark results">
       <thead>
         <tr>
           <th scope="col">Viewsync</th>
@@ -92,86 +94,149 @@
       <tbody>
         <tr>
           <th scope="row">1 (Sonic the Hedgehog)</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=XUnU23xNeAA">Marble Zone, Act 2 *</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=XUnU23xNeAA">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">Marble Zone, Act 2 *</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=_a2ylwE07qk">Marble Zone, Act 2</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=_a2ylwE07qk">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">Marble Zone, Act 2</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=fcNltNhMv2Y">Marble Zone, Act 1</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=fcNltNhMv2Y">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Marble Zone, Act 1</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">2 (Golden Axe)</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=XcXBshcMfog">Stage 5</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=XcXBshcMfog">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">Stage 5</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=D-ZasJIAO1M">Stage 3</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=D-ZasJIAO1M">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Stage 3</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=ES46971c0hQ">Stage 4</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=ES46971c0hQ">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">Stage 4</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">3 (Columns)</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=XvGwrqWVYgc">14,830</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=XvGwrqWVYgc">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">14,830</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=tF6Kg4QzZUQ">24,774</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=tF6Kg4QzZUQ">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">24,774</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=5ANijAGweyg">22,941</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=5ANijAGweyg">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">22,941</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">4 (Altered Beast)</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=_u5KPYhVJWw">First Place **</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=_u5KPYhVJWw">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">First Place **</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=3qEauW3jYwE">First Place **</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=3qEauW3jYwE">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">First Place **</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=Q3rs0ZDtL2o">Third Place</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Q3rs0ZDtL2o">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Third Place</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">5 (Space Harrier)</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=FldUOLRlfaA">Stage 3 (Frog Horde)</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=FldUOLRlfaA">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">Stage 3 (Frog Horde)</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="~">DNF ***</a>
+          <td>
+            <a href="">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">DNF ***</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=Wr-0jAi_8Xo">Stage 3 (Rocket Men)</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Wr-0jAi_8Xo">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">Stage 3 (Rocket Men)</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">6 (Revenge of the Shinobi)</th>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=uzO4Aubogvw">1st Boss (Phase 2)</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=uzO4Aubogvw">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">1st Boss (Phase 2)</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=efcG6opxOoQ">1st Boss (Phase 1)</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=efcG6opxOoQ">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">1st Boss (Phase 1)</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=0JIfnhJa9l0">2nd Stage</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=0JIfnhJa9l0">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">2nd Stage</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">7 (Gunstar Heroes)</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=oMcQ3aaQLD8">Stage 1</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=oMcQ3aaQLD8">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Stage 1</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=eGqt2IMScEQ">Seven Force (Phase 2)</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=eGqt2IMScEQ">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">Seven Force (Phase 2)</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=_1tdDiwgsSs">Seven Force (Phase 3) </a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=_1tdDiwgsSs">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">Seven Force (Phase 3)</strong>
+            </a>
           </td>
         </tr>
       </tbody>
@@ -205,12 +270,12 @@
           <td class="first"></td>
           <td class="first"></td>
         </tr>
-        <!-- <tr>
-          <th scope="row">Points</th>
-          <td class="points">3,508</td>
-          <td class="points">5,853</td>
-          <td class="points">7,665‬</td>
-        </tr> -->
+        <!--<tr>
+         <th scope="row">Points</th>
+         <td class="points">3,508</td>
+         <td class="points">5,853</td>
+         <td class="points">7,665‬</td>
+       </tr> -->
       </tbody>
     </table>
     <div id="footnote">
@@ -219,7 +284,7 @@
         within that Act during the time limit.
       </div>
       <div class="row justify-content-left">
-        ** Again, very close between MALF and Dan! Received official word from MALF that they boys determind it was a
+        ** Again, very close between MALF and Dan! Received official word from MALF that the boys determind it was a
         tie.
       </div>
       <div class="row justify-content-left">
@@ -233,7 +298,7 @@
     </div>
     <div class="row justify-content-center">
       <a href="https://www.reddit.com/user/final_search" class="credit-link">Special thanks to Reddit user
-        /u/final_search for the Sega logo </a>
+        /u/final_search for the Sega logo</a>
     </div>
     <p></p>
     <div class="row justify-content-center">
@@ -243,8 +308,9 @@
     </div>
   </div>
   <p></p>
-  <script src="scripts/scoreCount.js"></script>
+
   <script src="scripts/viewsync.js"></script>
+  <script src="scripts/spoilers.js"></script>
 </body>
 
 </html>

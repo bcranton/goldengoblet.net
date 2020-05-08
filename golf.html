@@ -23,14 +23,7 @@
     crossorigin="anonymous"></script>
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <title>Golden Goblet Standings</title>
-    <script lang="javascript">
-      $(document).ready(() => {if (window.location.hash == "#nospoiler") {
-        $("div table:first-of-type td")
-          .removeClass("first").removeClass("second").removeClass("third");
-        $("div table:first-of-type td a").text("watch");
-      $("div table:last-of-type").remove();
-      }});
-    </script>
+
 </head>
 
 <body id="golf-bg">
@@ -71,6 +64,15 @@
         </li>
       </ul>
     </div>
+    <div class="btn-group btn-group-toggle unit-toggler" data-toggle="buttons">
+      <label class="btn btn-secondary btn-select" id="hide-spoiler">
+        <input type="radio" name="spoiler">Hide Spoilers
+      </label>
+      <label class="btn btn-secondary btn-select" id="show-spoiler">
+        <input type="radio" name="spoiler">Show Spoilers
+      </label>
+    </div>
+
   </nav>
 
   <br><br>
@@ -81,7 +83,7 @@
     <div id="subtitle-escape" class="row justify-content-center text-nowrap">
       GOLDEN GOBLET
     </div>
-    <table class="table table-dark">
+    <table class="table table-dark results">
       <thead>
         <tr>
           <th scope="col">Viewsync</th>
@@ -93,86 +95,170 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=jZFLYTC5Ljo">83</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=jZFLYTC5Ljo">
+              <strong>Watch</strong>
+              <strong class="third" style="display: none;">83</strong>
+
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=4WbmA2RZaMY">68</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=4WbmA2RZaMY">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">68</strong>
+
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=Kh0NNky1RuQ">53</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Kh0NNky1RuQ">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">53</strong>
+
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=904e2YvlWNM">66</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=904e2YvlWNM">
+              <strong>Watch</strong>
+              <strong class="third" style="display: none;">66</strong>
+
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=dXgQIVlefs4">57</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=dXgQIVlefs4">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">57</strong>
+
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=rNXTP9SShvE">59</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=rNXTP9SShvE">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">59</strong>
+
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=dNMSOyz5vJA">60</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=dNMSOyz5vJA">
+              <strong>Watch</strong>
+              <strong class="third" style="display: none;">60</strong>
+
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=5hHsZ7fvKtE">47</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=5hHsZ7fvKtE">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">47</strong>
+
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=6M_oDOdoK8c">41</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=6M_oDOdoK8c">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">41</strong>
+
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=ocHbGkLJYXo">46</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=ocHbGkLJYXo">
+              <strong>Watch</strong>
+              <strong class="third" style="display: none;">46</strong>
+
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=-KWk9O6hiKQ">35</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=-KWk9O6hiKQ">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">35</strong>
+
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=muk9mPeDeGA">45</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=muk9mPeDeGA">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">45</strong>
+
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">5</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=kpSCxUil46c">67</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=kpSCxUil46c">
+              <strong>Watch</strong>
+              <strong class="third" style="display: none;">67</strong>
+
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=LSpxnNB67uk">41</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=LSpxnNB67uk">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">41</strong>
+
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=C5UQX2ZzYcg">44</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=C5UQX2ZzYcg">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">44</strong>
+
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">6</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=Up-EYz4P358">75</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Up-EYz4P358">
+              <strong>Watch</strong>
+              <strong class="third" style="display: none;">75</strong>
+
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=Qc16LBvtOag">56</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Qc16LBvtOag">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">56</strong>
+
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=vb0c5POvggY">64</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=vb0c5POvggY">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">64</strong>
+
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">7</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=ieipcxQvtak">90</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=ieipcxQvtak">
+              <strong>Watch</strong>
+              <strong class="third" style="display: none;">90</strong>
+
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=55FaSy-_Zao">70</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=55FaSy-_Zao">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">70</strong>
+
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=fOW1N7o0k7g">81</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=fOW1N7o0k7g">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">81</strong>
+
+            </a>
           </td>
         </tr>
       </tbody>
@@ -194,7 +280,7 @@
           <td class="third"></td>
         </tr>
         <tr>
-          <th scope="row">2nd Finishes</th>
+          <th scope="row"> Finishes</th>
           <td class="second"></td>
           <td class="second"></td>
           <td class="second"></td>
@@ -219,8 +305,9 @@
     </div>
   </div>
   <p></p>
-  <script src="scripts/scoreCount.js"></script>
+
   <script src="scripts/viewsync.js"></script>
+  <script src="scripts/spoilers.js"></script>
 </body>
 
 </html>

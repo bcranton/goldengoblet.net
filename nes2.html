@@ -23,14 +23,7 @@
         crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <title>Golden Goblet Standings</title>
-    <script lang="javascript">
-      $(document).ready(() => {if (window.location.hash == "#nospoiler") {
-        $("div table:first-of-type td")
-          .removeClass("first").removeClass("second").removeClass("third");
-        $("div table:first-of-type td a").text("watch");
-      $("div table:last-of-type").remove();
-      }});
-    </script>
+
 </head>
 
 <body id="nintendo-bg">
@@ -67,10 +60,20 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class='nav-link' href='/medals' id='medalsLink'>Medals</a>
+                    <a class='nav-link' href='medals.html' id='medalsLink'>Medals</a>
                 </li>
             </ul>
         </div>
+
+        <div class="btn-group btn-group-toggle unit-toggler" data-toggle="buttons">
+            <label class="btn btn-secondary btn-select" id="hide-spoiler">
+                <input type="radio" name="spoiler">Hide Spoilers
+            </label>
+            <label class="btn btn-secondary btn-select" id="show-spoiler">
+                <input type="radio" name="spoiler">Show Spoilers
+            </label>
+        </div>
+
     </nav>
 
     <br><br>
@@ -81,7 +84,7 @@
         <div id="subtitle-nintendo" class="row justify-content-center text-nowrap">
             GOLDEN GOBLET
         </div>
-        <table class="table table-dark">
+        <table class="table table-dark results">
             <thead>
                 <tr>
                     <th scope="col">Viewsync</th>
@@ -96,86 +99,149 @@
             <tbody>
                 <tr>
                     <th scope="row">1 (Gradius)</th>
-                    <td class="third comment">
-                        <a href="https://www.youtube.com/watch?v=C8uAAYklmU4">Volcano</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=C8uAAYklmU4">
+                            <strong>Watch</strong>
+                            <strong class="third comment" style="display: none;">Volcano</strong>
+                        </a>
                     </td>
-                    <td class="first comment">
-                        <a href="https://www.youtube.com/watch?v=pNnlT3ifV5w">Moai</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=pNnlT3ifV5w">
+                            <strong>Watch</strong>
+                            <strong class="first comment" style="display: none;">Moai</strong>
+                        </a>
                     </td>
-                    <td class="second comment">
-                        <a href="https://www.youtube.com/watch?v=WbOksP0W16g">Stonehenge</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=WbOksP0W16g">
+                            <strong>Watch</strong>
+                            <strong class="second comment" style="display: none;">Stonehenge</strong>
+                        </a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">2 (Kid Icarus)</th>
-                    <td class="first comment">
-                        <a href="https://www.youtube.com/watch?v=hZM27DMKm-0">1-3</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=hZM27DMKm-0">
+                            <strong>Watch</strong>
+                            <strong class="first comment" style="display: none;">1-3</strong>
+                        </a>
                     </td>
-                    <td class="third comment">
-                        <a href="https://www.youtube.com/watch?v=lRl70TrpsUQ">1-2</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=lRl70TrpsUQ">
+                            <strong>Watch</strong>
+                            <strong class="third comment" style="display: none;">1-2</strong>
+                        </a>
                     </td>
-                    <td class="second comment">
-                        <a href="https://www.youtube.com/watch?v=hDaojqD3goc">1-2</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=hDaojqD3goc">
+                            <strong>Watch</strong>
+                            <strong class="second comment" style="display: none;">1-2</strong>
+                        </a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">3 (Ghosts 'n Goblins)</th>
-                    <td class="first comment">
-                        <a href="https://www.youtube.com/watch?v=ft0LdMAxBWg">Stage 1 (End) *</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=ft0LdMAxBWg">
+                            <strong>Watch</strong>
+                            <strong class="first comment" style="display: none;">Stage 1 (End) *</strong>
+                        </a>
                     </td>
-                    <td class="third comment">
-                        <a href="https://www.youtube.com/watch?v=8ia8hfwEXO8">Stage 1 (River)</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=8ia8hfwEXO8">
+                            <strong>Watch</strong>
+                            <strong class="third comment" style="display: none;">Stage 1 (River)</strong>
+                        </a>
                     </td>
-                    <td class="second comment">
-                        <a href="https://www.youtube.com/watch?v=fMAdoq1O7CQ">Stage 1 (Forest)</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=fMAdoq1O7CQ">
+                            <strong>Watch</strong>
+                            <strong class="second comment" style="display: none;">Stage 1 (Forest)</strong>
+                        </a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">4 (Double Dragon)</th>
-                    <td class="first comment">
-                        <a href="https://www.youtube.com/watch?v=N3r2lNyy9kI">Mission 3 (Double Cave) **</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=N3r2lNyy9kI">
+                            <strong>Watch</strong>
+                            <strong class="first comment" style="display: none;">Mission 3 (Double Cave) **</strong>
+                        </a>
                     </td>
-                    <td class="third comment">
-                        <a href="https://www.youtube.com/watch?v=WPNCxTvt0to">Mission 3 (Start)</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=WPNCxTvt0to">
+                            <strong>Watch</strong>
+                            <strong class="third comment" style="display: none;">Mission 3 (Start)</strong>
+                        </a>
                     </td>
-                    <td class="second comment">
-                        <a href="https://www.youtube.com/watch?v=K--u65yMd-Y">Mission 3 (Double Cave)</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=K--u65yMd-Y">
+                            <strong>Watch</strong>
+                            <strong class="second comment" style="display: none;">Mission 3 (Double Cave)</strong>
+                        </a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">5 (Dr. Mario)</th>
-                    <td class="first comment">
-                        <a href="https://www.youtube.com/watch?v=ZvJOJWq9H_A">Level 6</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=ZvJOJWq9H_A">
+                            <strong>Watch</strong>
+                            <strong class="first comment" style="display: none;">Level 6</strong>
+                        </a>
                     </td>
-                    <td class="second comment">
-                        <a href="https://www.youtube.com/watch?v=Ip6Lh3qz79c">Level 4</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=Ip6Lh3qz79c">
+                            <strong>Watch</strong>
+                            <strong class="second comment" style="display: none;">Level 4</strong>
+                        </a>
                     </td>
-                    <td class="third comment">
-                        <a href="https://www.youtube.com/watch?v=SOkzKOBMMPM">Level 3</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=SOkzKOBMMPM">
+                            <strong>Watch</strong>
+                            <strong class="third comment" style="display: none;">Level 3</strong>
+                        </a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">6 (NES Open Tournament Golf)</th>
-                    <td class="comment">
-                        <a href="https://www.youtube.com/watch?v=QsTtkatDspc"><strong>No Contest ***</strong></a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=QsTtkatDspc">
+                            <strong>Watch</strong>
+                            <strong class="comment" style="display: none;">No Contest ***</strong>
+                        </a>
                     </td>
-                    <td class="comment">
-                        <a href="https://www.youtube.com/watch?v=MJ9GtC9G0-A"><strong>No Contest ***</strong></a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=MJ9GtC9G0-A">
+                            <strong>Watch</strong>
+                            <strong class="comment" style="display: none;">No Contest ***</strong>
+                        </a>
                     </td>
-                    <td class="comment">
-                        <a href="https://www.youtube.com/watch?v=w7Kilw5ED9A"><strong>No Contest ***</strong></a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=w7Kilw5ED9A">
+                            <strong>Watch</strong>
+                            <strong class="comment" style="display: none;">No Contest ***</strong>
+                        </a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">7 (Baseball)</th>
-                    <td class="first comment">
-                        <a href="https://www.youtube.com/watch?v=ov6PjItYtE8">7 (+1)</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=ov6PjItYtE8">
+                            <strong>Watch</strong>
+                            <strong class="first comment" style="display: none;">7 (+1)</strong>
+                        </a>
                     </td>
-                    <td class="second comment">
-                        <a href="https://www.youtube.com/watch?v=13Z2RAudRpY">3 (-2)</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=13Z2RAudRpY">
+                            <strong>Watch</strong>
+                            <strong class="second comment" style="display: none;">3 (-2)</strong>
+                        </a>
                     </td>
-                    <td class="third comment">
-                        <a href="https://www.youtube.com/watch?v=GKkdurMYIo8">0 (-11)</a>
+                    <td>
+                        <a href="https://www.youtube.com/watch?v=GKkdurMYIo8">
+                            <strong>Watch</strong>
+                            <strong class="third comment" style="display: none;">0 (-11)</strong>
+                        </a>
                     </td>
                 </tr>
             </tbody>
@@ -239,7 +305,9 @@
         </div>
     </div>
     <p></p>
-    <script src='https://d33wubrfki0l68.cloudfront.net/bundles/3f74c350ee6d023f5d8f2cf0ffa0feab64911904.js'></script>
+
+    <script src="scripts/viewsync.js"></script>
+    <script src="scripts/spoilers.js"></script>
 </body>
 
 </html>

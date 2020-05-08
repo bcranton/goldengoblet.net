@@ -24,14 +24,7 @@
     crossorigin="anonymous"></script>
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <title>Golden Goblet Standings</title>
-    <script lang="javascript">
-      $(document).ready(() => {if (window.location.hash == "#nospoiler") {
-        $("div table:first-of-type td")
-          .removeClass("first").removeClass("second").removeClass("third");
-        $("div table:first-of-type td a").text("watch");
-      $("div table:last-of-type").remove();
-      }});
-    </script>
+
 </head>
 
 <body id="nintendo-bg">
@@ -73,6 +66,15 @@
         </li>
       </ul>
     </div>
+    <div class="btn-group btn-group-toggle unit-toggler" data-toggle="buttons">
+      <label class="btn btn-secondary btn-select" id="hide-spoiler">
+        <input type="radio" name="spoiler">Hide Spoilers
+      </label>
+      <label class="btn btn-secondary btn-select" id="show-spoiler">
+        <input type="radio" name="spoiler">Show Spoilers
+      </label>
+    </div>
+
   </nav>
   <br>
   <div class="container">
@@ -82,7 +84,7 @@
     <div id="subtitle-nintendo" class="row justify-content-center text-nowrap">
       Golden&nbsp;&nbsp;Goblet
     </div>
-    <table class="table table-dark">
+    <table class="table table-dark results">
       <thead>
         <tr>
           <th scope="col">Viewsync</th>
@@ -94,86 +96,149 @@
       <tbody>
         <tr>
           <th scope="row">1 (Super Mario Bros.)</th>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=Ssq6FBqqFx8">4-1</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Ssq6FBqqFx8">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">4-1</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=glNuIFMDgdE">4-3</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=glNuIFMDgdE">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">4-3</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=1pdWDT84rP0">3-4</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=1pdWDT84rP0">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">3-4</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">2 (Ice Climber)</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=XXzbI2_Ep7k">7-6</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=XXzbI2_Ep7k">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">7-6</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=49sDeX0ICkU">4-5 *</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=49sDeX0ICkU">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">4-5 *</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=wzk0izQK80Q">6-Bonus</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=wzk0izQK80Q">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">6-Bonus</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">3 (Excitebike)</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=eySAVKPJQj8">Third Place</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=eySAVKPJQj8">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Third Place</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=PIYSf0di48A">First Place</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=PIYSf0di48A">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">First Place</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=hBTPtzaBOAQ">Second Place</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=hBTPtzaBOAQ">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">Second Place</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">4 (Donkey Kong Jr.)</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=68-Y_C6l-QY">2-3</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=68-Y_C6l-QY">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">2-3</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="">DNF **</a>
+          <td>
+            <a href="">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">DNF **</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=8jxAvDcuO4o">2-2</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=8jxAvDcuO4o">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">2-2</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">5 (Punch-out!!)</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=JzwYdtZM3es">Bald Bull</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=JzwYdtZM3es">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">Bald Bull</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=TuYFTn5iiMk">Von Kaiser</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=TuYFTn5iiMk">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Von Kaiser</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=H261VTMZPJI">Great Tiger</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=H261VTMZPJI">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">Great Tiger</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">6 (Balloon Fight)</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=lCr6CzPtZ6M">Phase 19</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=lCr6CzPtZ6M">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">Phase 19</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=iKuUox0KL60">Phase 6</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=iKuUox0KL60">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Phase 6</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=KnODfYdYpBo">Phase 12</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=KnODfYdYpBo">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">Phase 12</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">7 (Ninja Gaiden)</th>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=SVy6BOtZIVI">3-2 ***</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=SVy6BOtZIVI">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">3-2 ***</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=O0UUIil11X8">4-3</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=O0UUIil11X8">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">4-3</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=oAS0TufTKM4">3-2</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=oAS0TufTKM4">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">3-2</strong>
+            </a>
           </td>
         </tr>
       </tbody>
@@ -196,7 +261,7 @@
           <td class="third"></td>
         </tr>
         <tr>
-          <th scope="row">2nd Finishes</th>
+          <th scope="row"> Finishes</th>
           <td class="second"></td>
           <td class="second"></td>
           <td class="second"></td>
@@ -243,8 +308,9 @@
     </div>
   </div>
   <p></p>
-  <script src="scripts/scoreCount.js"></script>
+
   <script src="scripts/viewsync.js"></script>
+  <script src="scripts/spoilers.js"></script>
 </body>
 
 </html>

@@ -23,14 +23,7 @@
     crossorigin="anonymous"></script>
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <title>Golden Goblet Standings</title>
-    <script lang="javascript">
-      $(document).ready(() => {if (window.location.hash == "#nospoiler") {
-        $("div table:first-of-type td")
-          .removeClass("first").removeClass("second").removeClass("third");
-        $("div table:first-of-type td a").text("watch");
-      $("div table:last-of-type").remove();
-      }});
-    </script>
+
 </head>
 
 <body id="cod-bg">
@@ -67,10 +60,20 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class='nav-link' href='/medals' id='medalsLink'>Medals</a>
+          <a class='nav-link' href='medals.html' id='medalsLink'>Medals</a>
         </li>
       </ul>
     </div>
+
+    <div class="btn-group btn-group-toggle unit-toggler" data-toggle="buttons">
+      <label class="btn btn-secondary btn-select" id="hide-spoiler">
+        <input type="radio" name="spoiler">Hide Spoilers
+      </label>
+      <label class="btn btn-secondary btn-select" id="show-spoiler">
+        <input type="radio" name="spoiler">Show Spoilers
+      </label>
+    </div>
+
   </nav>
 
   <br><br>
@@ -81,7 +84,7 @@
     <div id="subtitle-cod" class="row justify-content-center text-nowrap">
       GOLDEN GOBLET
     </div>
-    <table class="table table-dark">
+    <table class="table table-dark results">
       <thead>
         <tr>
           <th scope="col">Viewsync</th>
@@ -93,86 +96,129 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td class="first comment">
-            <a href="https://www.youtube.com/watch?v=P-BRE6hdZL4">2nd</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=P-BRE6hdZL4">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">2nd</strong>
+            </a>
           </td>
-          <td class="first comment">
-            <a href="https://www.youtube.com/watch?v=LhEHADcN6EU">2nd</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=LhEHADcN6EU">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">2nd</strong></a>
           </td>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=-F8XjLPeMZE">5th</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=-F8XjLPeMZE">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">5th</strong></a>
           </td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td class="second comment">
-            <a href="https://www.youtube.com/watch?v=4-rDypJM_x8">34th</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=4-rDypJM_x8">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">34th</strong></a>
           </td>
-          <td class="first comment">
-            <a href="https://www.youtube.com/watch?v=eXlDV3Nq6Mo">1st</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=eXlDV3Nq6Mo">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">1st</strong></a>
           </td>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=vSdwkYWQwnE">45th</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=vSdwkYWQwnE">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">45th</strong></a>
           </td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=tfRyDTWFisY">33rd</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=tfRyDTWFisY">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">33rd</strong></a>
           </td>
-          <td class="second comment">
-            <a href="https://www.youtube.com/watch?v=14IqbdAY4qI">12th</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=14IqbdAY4qI">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">12th</strong></a>
           </td>
-          <td class="first comment">
-            <a href="https://www.youtube.com/watch?v=WOgWI0OFalk">10th</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=WOgWI0OFalk">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">10th</strong></a>
           </td>
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=vGhrjOhC9wo">46th</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=vGhrjOhC9wo">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">46th</strong></a>
           </td>
-          <td class="second comment">
-            <a href="https://www.youtube.com/watch?v=d12X7AKc8qA">34th</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=d12X7AKc8qA">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">34th</strong></a>
           </td>
-          <td class="first comment">
-            <a href="https://www.youtube.com/watch?v=exeANf8qG2w">22nd</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=exeANf8qG2w">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">22nd</strong></a>
           </td>
         </tr>
         <tr>
           <th scope="row">5</th>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="youtube.com/watch?v=7-jlnw79C1U">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">79th</strong>
           </td>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=NRJKM_D6YSU">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">2nd</strong>
           </td>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=cBEQOvs6DEc">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">49th</strong>
           </td>
         </tr>
         <tr>
           <th scope="row">6</th>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="">
+              <strong>TBD</strong>
+              <strong class="comment" style="display: none;">TBD</strong></a>
           </td>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="">
+              <strong>TBD</strong>
+              <strong class="comment" style="display: none;">TBD</strong></a>
           </td>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="">
+              <strong>TBD</strong>
+              <strong class="comment" style="display: none;">TBD</strong></a>
           </td>
         </tr>
         <tr>
           <th scope="row">7</th>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="">
+              <strong>TBD</strong>
+              <strong class="comment" style="display: none;">TBD</strong></a>
           </td>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="">
+              <strong>TBD</strong>
+              <strong class="comment" style="display: none;">TBD</strong></a>
           </td>
-          <td class="comment">
-            <a href="">TBD</a>
+          <td>
+            <a href="">
+              <strong>TBD</strong>
+              <strong class="comment" style="display: none;">TBD</strong></a>
           </td>
         </tr>
       </tbody>
@@ -189,21 +235,21 @@
       <tbody>
         <tr>
           <th scope="row">3rd Finishes</th>
-          <td class="third"></td>
-          <td class="third"></td>
-          <td class="third"></td>
+          <td class="third">Spoilers</td>
+          <td class="third">Spoilers</td>
+          <td class="third">Spoilers</td>
         </tr>
         <tr>
           <th scope="row">2nd Finishes</th>
-          <td class="second"></td>
-          <td class="second"></td>
-          <td class="second"></td>
+          <td class="second">Spoilers</td>
+          <td class="second">Spoilers</td>
+          <td class="second">Spoilers</td>
         </tr>
         <tr>
           <th scope="row">1st Finishes</th>
-          <td class="first"></td>
-          <td class="first"></td>
-          <td class="first"></td>
+          <td class="first">Spoilers</td>
+          <td class="first">Spoilers</td>
+          <td class="first">Spoilers</td>
         </tr>
       </tbody>
     </table>
@@ -226,7 +272,9 @@
     </div>
   </div>
   <p></p>
-  <script src='https://d33wubrfki0l68.cloudfront.net/bundles/3f74c350ee6d023f5d8f2cf0ffa0feab64911904.js'></script>
+
+  <script src="scripts/viewsync.js"></script>
+  <script src="scripts/spoilers.js"></script>
 </body>
 
 </html>

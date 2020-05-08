@@ -24,14 +24,7 @@
     crossorigin="anonymous"></script>
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <title>Golden Goblet Standings</title>
-    <script lang="javascript">
-      $(document).ready(() => {if (window.location.hash == "#nospoiler") {
-        $("div table:first-of-type td")
-          .removeClass("first").removeClass("second").removeClass("third");
-        $("div table:first-of-type td a").text("watch");
-      $("div table:last-of-type").remove();
-      }});
-    </script>
+
 </head>
 
 <body id="tarkov-bg">
@@ -72,6 +65,15 @@
         </li>
       </ul>
     </div>
+    <div class="btn-group btn-group-toggle unit-toggler" data-toggle="buttons">
+      <label class="btn btn-secondary btn-select" id="hide-spoiler">
+        <input type="radio" name="spoiler">Hide Spoilers
+      </label>
+      <label class="btn btn-secondary btn-select" id="show-spoiler">
+        <input type="radio" name="spoiler">Show Spoilers
+      </label>
+    </div>
+
   </nav>
   <div class="container">
     <div id="logo" class="row justify-content-center">
@@ -80,7 +82,7 @@
     <div id="subtitle-tarkov" class="row justify-content-center text-nowrap">
       GOLDEN GOBLET
     </div>
-    <table class="table table-dark">
+    <table class="table table-dark results">
       <thead>
         <tr>
           <th scope="col">Viewsync</th>
@@ -92,86 +94,149 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td class="second comment">
-            <a href="https://www.youtube.com/watch?v=5nNkXIw-jBE">20:08</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=5nNkXIw-jBE">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">20:08</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=Bcl3xoLFY0s">107,352</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Bcl3xoLFY0s">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">107,352</strong>
+            </a>
           </td>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=-Ucrd_Fs6k8">10:02</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=-Ucrd_Fs6k8">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">10:02</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td class="second comment">
-            <a href="https://www.youtube.com/watch?v=X9T3iSdTabA">31:13</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=X9T3iSdTabA">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">31:13</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=svDgqKmPcJU">131,742</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=svDgqKmPcJU">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">131,742</strong>
+            </a>
           </td>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=CV4Kxdz3Kys">7:49</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=CV4Kxdz3Kys">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">7:49</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=p1j4nSLyw90">93,914</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=p1j4nSLyw90">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">93,914</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=5N7BjOjJ1oo">339,150</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=5N7BjOjJ1oo">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">339,150</strong>
+            </a>
           </td>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=-oFW95s1Xto">3:33</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=-oFW95s1Xto">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">3:33</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=6uAo6SRFJ1w">136,634</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=6uAo6SRFJ1w">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">136,634</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=BjKOsQGOuZc">88,422</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=BjKOsQGOuZc">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">88,422</strong>
+            </a>
           </td>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=_OEGQMngZ9o">22,370</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=_OEGQMngZ9o">
+              <strong>Watch</strong>
+              <strong class="third" style="display: none;">22,370</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">5</th>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=kK0PIetBf38">7:41</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=kK0PIetBf38">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">7:41</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=t-t5Gw0S8nI">263,467</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=t-t5Gw0S8nI">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">263,467</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=Jt8JV2IAwRE">53,662</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Jt8JV2IAwRE">
+              <strong>Watch</strong>
+              <strong class="second" style="display: none;">53,662</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">6</th>
-          <td class="second comment">
-            <a href="https://www.youtube.com/watch?v=YHNtduDz1U8">3:19</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=YHNtduDz1U8">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">3:19</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=Q7avN0jNe9I">124,106</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=Q7avN0jNe9I">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">124,106</strong>
+            </a>
           </td>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=k0pPXEkmcNw">1:58</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=k0pPXEkmcNw">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">1:58</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">7</th>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=aSQajLbCC5g">10:10</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=aSQajLbCC5g">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">10:10</strong>
+            </a>
           </td>
-          <td class="second comment">
-            <a href="https://www.youtube.com/watch?v=OaiZPq8wavQ">12:28</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=OaiZPq8wavQ">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">12:28</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=dZtVGbSQkEs">126,455</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=dZtVGbSQkEs">
+              <strong>Watch</strong>
+              <strong class="first" style="display: none;">126,455</strong>
+            </a>
           </td>
         </tr>
       </tbody>
@@ -194,7 +259,7 @@
           <td class="third"></td>
         </tr>
         <tr>
-          <th scope="row">2nd Finishes</th>
+          <th scope="row"> Finishes</th>
           <td class="second"></td>
           <td class="second"></td>
           <td class="second"></td>
@@ -226,8 +291,9 @@
   </div>
 
   <p></p>
-  <script src="scripts/scoreCount.js"></script>
+
   <script src="scripts/viewsync.js"></script>
+  <script src="scripts/spoilers.js"></script>
 </body>
 
 </html>

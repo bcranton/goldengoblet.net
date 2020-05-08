@@ -23,14 +23,7 @@
     crossorigin="anonymous"></script>
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <title>Golden Goblet Standings</title>
-    <script lang="javascript">
-      $(document).ready(() => {if (window.location.hash == "#nospoiler") {
-        $("div table:first-of-type td")
-          .removeClass("first").removeClass("second").removeClass("third");
-        $("div table:first-of-type td a").text("watch");
-      $("div table:last-of-type").remove();
-      }});
-    </script>
+
 </head>
 
 <body id="escape-bg">
@@ -71,6 +64,15 @@
         </li>
       </ul>
     </div>
+    <div class="btn-group btn-group-toggle unit-toggler" data-toggle="buttons">
+      <label class="btn btn-secondary btn-select" id="hide-spoiler">
+        <input type="radio" name="spoiler">Hide Spoilers
+      </label>
+      <label class="btn btn-secondary btn-select" id="show-spoiler">
+        <input type="radio" name="spoiler">Show Spoilers
+      </label>
+    </div>
+
   </nav>
 
   <br><br>
@@ -81,7 +83,7 @@
     <div id="subtitle-escape" class="row justify-content-center text-nowrap">
       GOLDEN GOBLET
     </div>
-    <table class="table table-dark">
+    <table class="table table-dark results">
       <thead>
         <tr>
           <th scope="col">Viewsync</th>
@@ -93,38 +95,65 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td class="third comment">
-            <a href="https://www.youtube.com/watch?v=SKsoqmb041k">Third</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=SKsoqmb041k">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Third</strong>
+            </a>
           </td>
-          <td class="first comment">
-            <a href="https://www.youtube.com/watch?v=bBorifP2z2k">First</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=bBorifP2z2k">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">First</strong>
+            </a>
           </td>
-          <td class="first comment">
-            <a href="https://www.youtube.com/watch?v=5dM3sph2Ydw">First</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=5dM3sph2Ydw">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">First</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=-M3CLV92yo0">0 Seals</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=-M3CLV92yo0">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">0 Seals</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=5t7237OhX4g">2 Seals</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=5t7237OhX4g">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">2 Seals</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=5-IobIXm0go">1 Seal</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=5-IobIXm0go">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">1 Seal</strong>
+            </a>
           </td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td class="third">
-            <a href="https://www.youtube.com/watch?v=WUpHxIrKI5o">Uncompleted</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=WUpHxIrKI5o">
+              <strong>Watch</strong>
+              <strong class="third comment" style="display: none;">Incompleted</strong>
+            </a>
           </td>
-          <td class="first">
-            <a href="https://www.youtube.com/watch?v=hfc5sWGEiyM">Complete (First)</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=hfc5sWGEiyM">
+              <strong>Watch</strong>
+              <strong class="first comment" style="display: none;">Complete (First)</strong>
+            </a>
           </td>
-          <td class="second">
-            <a href="https://www.youtube.com/watch?v=BD7OALi-boU">Complete (Second)</a>
+          <td>
+            <a href="https://www.youtube.com/watch?v=BD7OALi-boU">
+              <strong>Watch</strong>
+              <strong class="second comment" style="display: none;">Complete (Second)</strong>
+            </a>
           </td>
         </tr>
       </tbody>
@@ -171,8 +200,9 @@
     </div>
   </div>
   <p></p>
-  <script src="scripts/scoreCount.js"></script>
+
   <script src="scripts/viewsync.js"></script>
+  <script src="scripts/spoilers.js"></script>
 </body>
 
 </html>
