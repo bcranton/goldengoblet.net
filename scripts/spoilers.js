@@ -2,20 +2,20 @@ $(document).ready(function () {
 
     if (window.localStorage.getItem("spoiler") != "show") {
         window.localStorage.setItem("spoiler", "hide");
-        $('button').text("Show Spoilers");
+        $('.btn-warning').text("Show Spoilers");
         scoreCount()
 
     }
 
     else if (window.localStorage.getItem("spoiler") == "show") {
-        $('button').text("Hide Spoilers");
+        $('.btn-warning').text("Hide Spoilers");
         $('.results #spoilerSpan').toggle();
         scoreCount()
 
     }
     else {
         window.localStorage.setItem("spoiler", "hide");
-        $('button').text("Show Spoilers");
+        $('.btn-warning').text("Show Spoilers");
         scoreCount()
 
     }
@@ -29,11 +29,11 @@ $(document).ready(function () {
 function stateChange() {
     if (window.localStorage.getItem("spoiler") == "show") {
         window.localStorage.setItem("spoiler", "hide");
-        $('button').text("Show Spoilers");
+        $('.btn-warning').text("Show Spoilers");
     }
     else {
         window.localStorage.setItem("spoiler", "show");
-        $('button').text("Hide Spoilers");
+        $('.btn-warning').text("Hide Spoilers");
 
     }
     
