@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+    if (window.localStorage.getItem("visited") != "True") {
+        $('.header').show();
+        window.localStorage.setItem("visited", "True")
+    }
+
     if (window.localStorage.getItem("spoiler") != "show") {
         window.localStorage.setItem("spoiler", "hide");
         $('.btn-warning').text("Show Spoilers");

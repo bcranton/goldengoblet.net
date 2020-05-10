@@ -286,3 +286,13 @@ a:hover {
     font-weight: bold;
     font-size: 1.15em;
 }
+
+.header {
+    display: none;
+    padding: .25px;
+    text-align: center;
+    background: #24A38A;
+    color: white;
+    font-size: 1em;
+  }
+  
