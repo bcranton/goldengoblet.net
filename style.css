@@ -33,6 +33,7 @@
     src: URL('fonts/Pretendo.ttf') format('truetype');
 }
 
+
 #subtitle-spelunky {
     font-family: 'Tekton-Bold';
     font-size: 3em;
@@ -121,11 +122,10 @@
 }
 
 .goblet-game {
-    font-size: 1.05em;
+    font-family: 'Playball', cursive;
+    font-size: 1.1em;
     color: white;
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    font-weight: bold;
+    letter-spacing: .03em;
 }
 
 .channels {
