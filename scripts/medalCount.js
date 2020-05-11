@@ -7,14 +7,14 @@ for (c of allCompetitors) {
         var img = document.createElement('span');
         img.style.fontStyle = 'bold';
         if (p == 0) {
-            img.innerHTML = `${c.bronze}x <i class ="fas fa-medal third"></i>`
+            img.innerHTML = `${c.bronze}x <i class ="fas fa-medal third" style="font-style:none"></i>`
         }else if (p == 1) {
             img.innerHTML = `${c.silver}x <i class ="fas fa-medal second" style="font-style:none"></i>`
         }else {
-            img.innerHTML = `${c.gold}x <i class ="fas fa-medal first"></i>`
+            img.innerHTML = `${c.gold}x <i class ="fas fa-medal first" style="font-style:none"></i>`
         }
-        document.querySelector(`table:nth-child(3) > tbody:nth-child(4) > tr > td:nth-child(${allCompetitors.indexOf(c)+1})`).appendChild(img).appendChild(document.createElement('span'));
-        document.querySelectorAll(`table:nth-child(3) > tbody:nth-child(4) > tr > td:nth-child(${allCompetitors.indexOf(c)+1}) > span > span`)[p].style = "padding: 1.5%"
+        document.querySelector(`table:nth-child(3) > tbody:nth-child(4) > tr > th:nth-child(${allCompetitors.indexOf(c)+1})`).appendChild(img).appendChild(document.createElement('span'));
+        document.querySelectorAll(`table:nth-child(3) > tbody:nth-child(4) > tr > th:nth-child(${allCompetitors.indexOf(c)+1}) > span > span`)[p].style = "padding: 1.5%"
     }
     var body = ''
     for (let b = 0; b < c.bronze; b++) {
