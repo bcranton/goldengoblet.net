@@ -16,7 +16,7 @@ var competitors = [
 	{
 		"Name": "Dan Gheesling",
 		"Handle": "dangheesling",
-		"Gold": 28,
+		"Gold": 29,
 		"Silver": 29,
 		"Bronze": 70,
 		"Wins": [
@@ -29,7 +29,7 @@ var competitors = [
 		"Name": "Michael AL Fox",
 		"Handle": "MALF",
 		"Gold": 62,
-		"Silver": 42,
+		"Silver": 43,
 		"Bronze": 23,
 		"Wins": [
 			"Escape From Tarkov",
@@ -43,7 +43,7 @@ var competitors = [
 		"Handle": "Northernlion",
 		"Gold": 45,
 		"Silver": 53,
-		"Bronze": 29,
+		"Bronze": 30,
 		"Wins": [
 			"Spelunky",
 			"Slay the Spire",
