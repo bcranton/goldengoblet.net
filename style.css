@@ -270,6 +270,10 @@ a:hover {
 #medalsLink:not(.active) {
     color: rgb(212, 175, 55);
 }
+#nav_bar .active {
+    color:            #F8F8F8;
+    background-color: #4f81bd;
+}
 
 .table td, .table th {
     text-align: center;
