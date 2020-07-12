@@ -14,13 +14,14 @@
   <link rel="stylesheet" href="style.css">
   <script  src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-    crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+  <script src="./scripts/dropdown.js"></script> 
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <title>Golden Goblet Standings</title>
   <div class="header">
@@ -38,44 +39,8 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Clubhouse Games
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="index.html">Trackmania</a>
-            <a class="dropdown-item active" href="clubgames.html">Clubhouse Games</a>
-            <a class="dropdown-item" href="golfclub2.html">The Golf Club 2019 (Week 2)</a>
-            <a class="dropdown-item" href="golfclub.html">The Golf Club 2019 (Week 1)</a>
-            <a class="dropdown-item" href="cod3.html">COD: Warzone (Week 3)</a>
-            <a class="dropdown-item" href="smbb2.html">Super Mega Baseball 3 (Week 2)</a>
-            <a class="dropdown-item" href="smbb.html">Super Mega Baseball 3 (Week 1)</a>
-            <a class="dropdown-item" href="golf2.html">Golf With Your Friends (Week 2)</a>
-            <a class="dropdown-item" href="cod2.html">COD: Warzone (Week 2)</a>
-            <a class="dropdown-item" href="cod.html">COD: Warzone (Week 1)</a>
-            <a class="dropdown-item" href="nes2.html">NES Classics (Week 2)</a>
-            <a class="dropdown-item" href="smm2.html">Super Mario Maker 2</a>
-            <a class="dropdown-item" href="guts.html">Guts and Glory</a>
-            <a class="dropdown-item" href="golf.html">Golf With Your Friends (Week 1)</a>
-            <a class="dropdown-item" href="escape.html">Escape Rooms</a>
-            <a class="dropdown-item" href="hitman2.html">Hitman (Week 2)</a>
-            <a class="dropdown-item" href="snes.html">SNES Classics</a>
-            <a class="dropdown-item" href="nes.html">NES Classics (Week 1)</a>
-            <a class="dropdown-item" href="sega.html">SEGA Classics</a>
-            <a class="dropdown-item" href="spire.html">Slay the Spire</a>
-            <a class="dropdown-item" href="hitman.html">Hitman 2 (Week 1)</a>
-            <a class="dropdown-item" href="tarkov.html">Escape from Tarkov</a>
-            <a class="dropdown-item" href="spelunky.html">Spelunky</a>
-
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class='nav-link' href='medals.html' id='medalsLink'>Medals</a>
-        </li>
-      </ul>
-    </div>
+      <div id="navbarSupportedContentjs"></div>
+  </div>
 
     <div class="btn-group btn-group-toggle unit-toggler" data-toggle="buttons">
       <button type="button" class="btn btn-warning" aria-pressed="false">
