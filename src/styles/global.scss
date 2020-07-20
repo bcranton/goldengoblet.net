@@ -1,0 +1,293 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+  font-family: Tekton-Bold;
+  src: url("./fonts/Tekton-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bender-Bold;
+  src: url("./fonts/Bender-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: coolvetica;
+  src: url("./fonts/coolvetica\ rg.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: hl45;
+  src: url("./fonts/hl45.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: sega;
+  src: url("./fonts/sega.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: switch-blade-roman;
+  src: url("./fonts/switch-blade-roman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Pretendo;
+  src: url("./fonts/Pretendo.ttf") format("truetype");
+}
+
+body {
+  background-color: #202020;
+  #subtitle {
+    color: #d4af37;
+  }
+}
+
+body.medals-theme {
+  background-color: #d4af37;
+
+  #subtitle {
+    color: black;
+    font-family: "switch-blade-roman";
+    font-size: 4rem;
+  }
+}
+
+body.spelunky-theme {
+  background-color: #000419;
+
+  #subtitle {
+    color: #d9aa5a;
+    font-family: "Tekton-Bold";
+    font-size: 3rem;
+  }
+}
+
+body.tarkov-theme {
+  background-color: #1a1a1a;
+
+  #subtitle {
+    font-family: "Bender-Bold";
+    font-size: 3rem;
+    color: white;
+  }
+}
+
+body.hitman-theme {
+  background-color: #28050b;
+
+  #subtitle {
+    font-family: "coolvetica";
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 0.25em;
+  }
+}
+
+body.hitman2-theme {
+  #subtitle {
+    font-family: "coolvetica";
+    font-size: 3rem;
+    color: gold;
+    letter-spacing: 13px;
+  }
+}
+
+body.pubg-theme {
+  #subtitle {
+    font-family: "hl45";
+    font-size: 4rem;
+    color: #c56c00;
+  }
+}
+
+body.spire-theme {
+  #subtitle {
+    font-family: "Kreon", serif;
+    font-size: 4rem;
+    color: #dab027;
+  }
+}
+
+body.sega-theme {
+  #subtitle {
+    font-family: "sega";
+    font-size: 4rem;
+    color: #dab027;
+  }
+}
+
+body.nintendo-theme {
+  #subtitle {
+    font-family: "Pretendo";
+    font-size: 4rem;
+    color: #dab027;
+  }
+}
+
+body.snes-theme {
+  #subtitle {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dab027;
+    letter-spacing: 6px;
+  }
+}
+
+body.escape-theme {
+  #subtitle {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dab027;
+    letter-spacing: 6px;
+  }
+}
+body.mario-theme {
+  #subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #dab027;
+    letter-spacing: 4px;
+  }
+}
+
+body.cod-theme {
+  #subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #dab027;
+    letter-spacing: 4px;
+  }
+}
+
+.goblet-win {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: gold;
+}
+
+.goblet-game {
+  font-family: "Playball", cursive;
+  font-size: 1.1rem;
+  color: white;
+  letter-spacing: 0.03rem;
+}
+
+.channels {
+  font-size: 1.1rem;
+}
+
+.first {
+  color: gold;
+  font-weight: bold;
+}
+
+.second {
+  color: silver;
+  font-weight: bold;
+}
+
+.third {
+  color: #cd7f32;
+  font-weight: bold;
+}
+
+.points {
+  color: #55db26;
+  font-weight: bold;
+}
+
+#footnote {
+  color: white;
+  font-size: 0.75rem;
+
+  ul {
+    @extend .list-unstyled;
+  }
+}
+
+#points-calc {
+  border-top: 2px solid black;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.credit-link:link {
+  color: white;
+  opacity: 0.75;
+  font-size: 0.75rem;
+}
+
+.credit-link:visited {
+  color: white;
+}
+
+.credit-link:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 1;
+}
+
+.credit-link-light:link {
+  color: black;
+  opacity: 0.75;
+  font-size: 0.75rem;
+}
+
+.credit-link-light:visited {
+  color: black;
+}
+
+.credit-link-light:hover {
+  text-decoration: none;
+  color: black;
+  opacity: 1;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.navbar {
+  font-size: 1.25rem;
+}
+
+#medalsLink:not(.active) {
+  color: #d4af37;
+}
+
+#medalsLink.active {
+  color: white;
+}
+
+.table td,
+.table th {
+  text-align: center;
+}
+
+tr td.medals {
+  border-top: 2px solid black;
+  font-size: 1.4rem;
+  grid-gap: 10px;
+  grid-template-columns: repeat(10, max-content);
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+#medal-totals {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.header {
+  display: none;
+  padding: 0.25px;
+  text-align: center;
+  background: #24a38a;
+  color: white;
+  font-size: 1rem;
+}
