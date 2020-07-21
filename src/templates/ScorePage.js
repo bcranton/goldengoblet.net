@@ -18,12 +18,20 @@ export default function ScorePage({ data, pageContext }) {
       <Layout currentGame={name} theme={theme} navButtons={<SpoilerButton />}>
         <SEO title={name} />
         <ImageHeader data={data.gameImage} alt={`${name} Logo`} />
-        <h2 id="subtitle" className="text-center text-nowrap">
-          GOLDEN GOBLET
-        </h2>
-        <ScoreTable data={scores} notes={notes} />
-        <ResultsTable data={scores} />
-        <ScoreFootnotes notes={notes} markdown={data?.gameMarkdown?.childMarkdownRemark?.html} />
+        {scores ? (
+          <>
+            <h2 id="subtitle" className="text-center text-nowrap">
+              Golden Goblet
+            </h2>
+            <ScoreTable data={scores} notes={notes} />
+            <ResultsTable data={scores} />
+            <ScoreFootnotes notes={notes} markdown={data?.gameMarkdown?.childMarkdownRemark?.html} />
+          </>
+        ) : (
+          <h2 id="subtitle" className="text-center mt-5">
+            Coming Soon
+          </h2>
+        )}
       </Layout>
     </SpoilerProvider>
   );
