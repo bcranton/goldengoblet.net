@@ -34,9 +34,9 @@ const MedalsTable = ({ scores }) => {
       <tr>
         {scores.map((winner) => (
           <td key={winner.name} className="medals">
-            <ContestantMedals scores={contestantScores[winner.name]} place="first" />
-            <ContestantMedals scores={contestantScores[winner.name]} place="second" />
             <ContestantMedals scores={contestantScores[winner.name]} place="third" />
+            <ContestantMedals scores={contestantScores[winner.name]} place="second" />
+            <ContestantMedals scores={contestantScores[winner.name]} place="first" />
           </td>
         ))}
       </tr>
