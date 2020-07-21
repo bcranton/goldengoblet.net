@@ -20,7 +20,7 @@ const MedalsPage = ({ data }) => {
         Golden Goblet
       </div>
       <Table variant="dark" borderless>
-        <thead>
+        <thead className="table-center">
           <tr>
             {data.scores.group.map(({ name, nodes }) => (
               <th key={name}>
@@ -35,7 +35,7 @@ const MedalsPage = ({ data }) => {
         </thead>
         <GobletWins scores={data.scores.group} winners={data.winners.group} />
         <MedalsTable scores={data.scores.group} />
-        <tfoot>
+        <tfoot className="table-center">
           <tr id="points-calc">
             <th colSpan={data.winners.group.length + 1}>
               <Row>

@@ -29,9 +29,11 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
   result.data.allGamesCsv.nodes.forEach((data, index) => {
     notes = data.scores
-      .map((node) => node.days.map((day) => day.notes))
-      .flat()
-      .filter(Boolean);
+      ? data.scores
+          .map((node) => node.days.map((day) => day.notes))
+          .flat()
+          .filter(Boolean)
+      : [];
     if (index === 0) {
       createPage({
         path: "/",

@@ -3,7 +3,6 @@ import { Table } from "react-bootstrap";
 
 import Score from "./Score";
 import ViewsyncLink from "./ViewsyncLink";
-import YoutubeChannelLink from "./YoutubeChannelLink";
 
 const ScoreTable = ({ data, notes }) => {
   let rows = [];
@@ -23,7 +22,7 @@ const ScoreTable = ({ data, notes }) => {
   console.log(data);
 
   return (
-    <Table variant="dark" className="results">
+    <Table variant="dark" className="results table-center">
       <thead>
         <tr>
           <th scope="col">Viewsync</th>

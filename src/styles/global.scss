@@ -59,6 +59,7 @@ body.spelunky-theme {
     color: #d9aa5a;
     font-family: "Tekton-Bold";
     font-size: 3rem;
+    text-transform: uppercase;
   }
 }
 
@@ -69,6 +70,7 @@ body.tarkov-theme {
     font-family: "Bender-Bold";
     font-size: 3rem;
     color: white;
+    text-transform: uppercase;
   }
 }
 
@@ -80,15 +82,19 @@ body.hitman-theme {
     font-size: 3rem;
     color: white;
     letter-spacing: 0.25em;
+    text-transform: uppercase;
   }
 }
 
 body.hitman2-theme {
+  background-color: #4c1922;
+
   #subtitle {
     font-family: "coolvetica";
     font-size: 3rem;
     color: gold;
     letter-spacing: 13px;
+    text-transform: uppercase;
   }
 }
 
@@ -101,6 +107,8 @@ body.pubg-theme {
 }
 
 body.spire-theme {
+  background-color: #001b21;
+
   #subtitle {
     font-family: "Kreon", serif;
     font-size: 4rem;
@@ -109,6 +117,8 @@ body.spire-theme {
 }
 
 body.sega-theme {
+  background-color: #000419;
+
   #subtitle {
     font-family: "sega";
     font-size: 4rem;
@@ -130,23 +140,55 @@ body.snes-theme {
     font-weight: bold;
     color: #dab027;
     letter-spacing: 6px;
+    text-transform: uppercase;
   }
 }
 
 body.escape-theme {
+  background-color: #4c1922;
+
   #subtitle {
     font-size: 4rem;
     font-weight: bold;
     color: #dab027;
     letter-spacing: 6px;
+    text-transform: uppercase;
   }
 }
+
+body.guts-theme {
+  background-color: #1b2631;
+
+  #subtitle {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dab027;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+}
+
 body.mario-theme {
+  background-color: #323232;
+
   #subtitle {
     font-size: 3rem;
     font-weight: bold;
     color: #dab027;
     letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+}
+
+body.smb-theme {
+  background-color: #202020;
+
+  #subtitle {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dab027;
+    letter-spacing: 6px;
+    text-transform: uppercase;
   }
 }
 
@@ -156,6 +198,19 @@ body.cod-theme {
     font-weight: bold;
     color: #dab027;
     letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+}
+
+body.golf-theme {
+  background-color: #202020;
+
+  #subtitle {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dab027;
+    letter-spacing: 6px;
+    text-transform: uppercase;
   }
 }
 
@@ -263,8 +318,8 @@ a:hover {
   color: white;
 }
 
-.table td,
-.table th {
+.table-center td,
+.table-center th {
   text-align: center;
 }
 

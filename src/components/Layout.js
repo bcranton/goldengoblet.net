@@ -47,7 +47,7 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
           <Nav>{navButtons}</Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Container>{children}</Container>
+      <Container className="pt-4">{children}</Container>
     </>
   );
 };
