@@ -35,7 +35,7 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
           <Nav className="mr-auto">
             <NavDropdown title={currentGame || "Games"} id="gamesDropdown">
               {data.allGamesCsv.nodes.map(({ name, slug }) => (
-                <NavDropdown.Item as={Link} to={`/${slug}`} key={slug}>
+                <NavDropdown.Item as={Link} to={`/${slug}`} activeClassName="active" key={slug}>
                   {name}
                 </NavDropdown.Item>
               ))}

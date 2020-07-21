@@ -6,7 +6,7 @@ import ViewsyncLink from "./ViewsyncLink";
 
 const ScoreTable = ({ data, notes }) => {
   let rows = [];
-  for (let day = 0; day < 7; day++) {
+  for (let day = 0; day < data[0].days.length; day++) {
     rows.push(
       <tr key={day}>
         <th scope="row">

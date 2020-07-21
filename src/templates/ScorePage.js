@@ -20,7 +20,7 @@ export default function ScorePage({ data, pageContext }) {
         <ImageHeader data={data.gameImage} alt={`${name} Logo`} />
         {scores ? (
           <>
-            <h2 id="subtitle" className="text-center text-nowrap">
+            <h2 id="subtitle" className="text-center text-nowrap my-2">
               Golden Goblet
             </h2>
             <ScoreTable data={scores} notes={notes} />
