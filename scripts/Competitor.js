@@ -17,7 +17,7 @@ var competitors = [
 		"Name": "Dan Gheesling",
 		"Handle": "dangheesling",
 		"Gold": 35,
-		"Silver": 34,
+		"Silver": 35,
 		"Bronze": 91,
 		"Wins": [
 			"SEGA Classics",
@@ -29,7 +29,7 @@ var competitors = [
 		"Name": "Michael AL Fox",
 		"Handle": "MALF",
 		"Gold": 75,
-		"Silver": 56,
+		"Silver": 57,
 		"Bronze": 29,
 		"Wins": [
 			"Escape From Tarkov",
@@ -41,7 +41,7 @@ var competitors = [
 	{
 		"Name": "Ryan Letourneau",
 		"Handle": "Northernlion",
-		"Gold": 61,
+		"Gold": 62,
 		"Silver": 63,
 		"Bronze": 36,
 		"Wins": [
