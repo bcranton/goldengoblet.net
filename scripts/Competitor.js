@@ -16,9 +16,9 @@ var competitors = [
 	{
 		"Name": "Dan Gheesling",
 		"Handle": "dangheesling",
-		"Gold": 34,
+		"Gold": 35,
 		"Silver": 34,
-		"Bronze": 92,
+		"Bronze": 91,
 		"Wins": [
 			"SEGA Classics",
 			"NES Classics"
@@ -28,8 +28,8 @@ var competitors = [
 	{
 		"Name": "Michael AL Fox",
 		"Handle": "MALF",
-		"Gold": 76,
-		"Silver": 55,
+		"Gold": 75,
+		"Silver": 56,
 		"Bronze": 29,
 		"Wins": [
 			"Escape From Tarkov",
