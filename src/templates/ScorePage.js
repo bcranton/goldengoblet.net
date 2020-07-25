@@ -9,10 +9,10 @@ import ScoreTable from "../components/ScoreTable";
 import ScoreFootnotes from "../components/ScoreFootnotes";
 import ResultsTable from "../components/ResultsTable";
 import ImageHeader from "../components/ImageHeader";
+import Credits from "../components/CreditsFooter";
 
 export default function ScorePage({ data, pageContext }) {
   const { name, notes, scores, theme } = pageContext;
-
   return (
     <SpoilerProvider>
       <Layout currentGame={name} theme={theme} navButtons={<SpoilerButton />}>
@@ -26,12 +26,14 @@ export default function ScorePage({ data, pageContext }) {
             <ScoreTable data={scores} notes={notes} />
             <ResultsTable data={scores} />
             <ScoreFootnotes notes={notes} markdown={data?.gameMarkdown?.childMarkdownRemark?.html} />
+            <Credits data={data.gitHubImage} color="" />
           </>
         ) : (
-          <h2 id="subtitle" className="text-center mt-5">
-            Coming Soon
-          </h2>
-        )}
+            <h2 id="subtitle" className="text-center mt-5">
+              Coming Soon
+            </h2>
+          )}
+        <p></p>
       </Layout>
     </SpoilerProvider>
   );
@@ -47,7 +49,11 @@ export const query = graphql`
     gameImage: file(relativePath: { eq: $image }) {
       publicURL
     }
+    gitHubImage: file(relativePath: {eq: "GitHub-Mark-Light-32px.png"}) {
+      publicURL
+    }
   }
+
 `;
 
 // gameImage: file(relativePath: { eq: $image }) {

@@ -8,6 +8,7 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import MedalsTable from "../components/MedalsTable";
 import GobletWins from "../components/GobletWins";
+import Credits from "../components/CreditsFooter";
 
 const MedalsPage = ({ data }) => {
   return (
@@ -27,8 +28,8 @@ const MedalsPage = ({ data }) => {
                 {nodes[0].youtube ? (
                   <a href={`https://www.youtube.com/user/${nodes[0].youtube.channel}`}>{name}</a>
                 ) : (
-                  name
-                )}
+                    name
+                  )}
               </th>
             ))}
           </tr>
@@ -53,6 +54,8 @@ const MedalsPage = ({ data }) => {
           </tr>
         </tfoot>
       </Table>
+      <Credits data={data.gitHubImage} color="-light" />
+      <p></p>
     </Layout>
   );
 };
@@ -89,6 +92,9 @@ export const query = graphql`
           }
         }
       }
+    }
+    gitHubImage: file(relativePath: {eq: "GitHub-Mark-32px.png"}) {
+      publicURL
     }
   }
 `;
