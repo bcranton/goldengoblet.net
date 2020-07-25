@@ -13,11 +13,13 @@ const Credits = ({ data, color }) => {
             </div>
             <p></p>
             <div className="row justify-content-center">
-                {childImageSharp ? (
-                    <Img fluid={childImageSharp.fluid} alt="Github Logo" />
-                ) : (
-                        <img src={publicURL} className="img-fluid" alt="Github Logo" />
-                    )}
+                <a href="https://github.com/bcranton/goldengoblet.net">
+                    {childImageSharp ? (
+                        <Img fluid={childImageSharp.fluid} alt="Github Logo" />
+                    ) : (
+                            <img src={publicURL} className="img-fluid" alt="Github Logo" />
+                        )}
+                </a>
             </div>
         </div >
     );
