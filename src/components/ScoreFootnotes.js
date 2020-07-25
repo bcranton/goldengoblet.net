@@ -14,6 +14,7 @@ const ScoreFootnotes = ({ markdown, notes }) => (
         }}
       ></div>
     )}
+    <p></p>
   </div>
 )
 
