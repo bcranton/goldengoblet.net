@@ -2,11 +2,6 @@ import React from "react"
 
 const ScoreFootnotes = ({ markdown, notes }) => (
   <div id="footnote">
-    {notes.map((note, index) => (
-      <div key={index}>
-        {"*".repeat(index + 1)} {note}
-      </div>
-    ))}
     {markdown && (
       <div
         dangerouslySetInnerHTML={{
@@ -14,6 +9,12 @@ const ScoreFootnotes = ({ markdown, notes }) => (
         }}
       ></div>
     )}
+    <p></p>
+    {notes.map((note, index) => (
+      <div key={index}>
+        {"*".repeat(index + 1)} {note}
+      </div>
+    ))}
     <p></p>
   </div>
 )
