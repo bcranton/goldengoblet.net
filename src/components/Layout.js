@@ -18,6 +18,7 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
           slug
           name
         }
+        totalCount
       }
     }
   `);
@@ -41,10 +42,14 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
                   {name}
                 </NavDropdown.Item>
               ))}
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/games" activeClassName="active">
-                View All Games
-              </NavDropdown.Item>
+              {data.allGamesCsv.totalCount > 5 && (
+                <>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item as={Link} to="/games" activeClassName="active">
+                    View All Games
+                  </NavDropdown.Item>
+                </>
+              )}
             </NavDropdown>
             <Nav.Link as={Link} to="/medals/" id="medalsLink" activeClassName="active">
               Medals
