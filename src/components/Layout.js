@@ -5,13 +5,13 @@ import { Helmet } from "react-helmet";
 
 const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query LayoutQuery {
       site {
         siteMetadata {
           title
         }
       }
-      allGamesCsv {
+      allGamesCsv(limit: 5) {
         nodes {
           slug
           name
@@ -20,7 +20,7 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
     }
   `);
   return (
-    <>
+    <div className="min-vh-100 d-flex flex-column pb-4">
       <Helmet>
         <body className={`${theme}-theme`} />
         <link
@@ -39,6 +39,10 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
                   {name}
                 </NavDropdown.Item>
               ))}
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/weeks" activeClassName="active">
+                View All Weeks
+              </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/medals/" id="medalsLink" activeClassName="active">
               Medals
@@ -47,8 +51,8 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
           <Nav>{navButtons}</Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Container className="pt-4">{children}</Container>
-    </>
+      <Container className="py-4 flex-grow-1">{children}</Container>
+    </div>
   );
 };
 
