@@ -9,10 +9,10 @@ import ScoreTable from "../components/ScoreTable";
 import ScoreFootnotes from "../components/ScoreFootnotes";
 import ResultsTable from "../components/ResultsTable";
 import ImageHeader from "../components/ImageHeader";
-import Credits from "../components/CreditsFooter";
 
 export default function ScorePage({ data, pageContext }) {
   const { name, notes, scores, theme } = pageContext;
+
   return (
     <SpoilerProvider>
       <Layout currentGame={name} theme={theme} navButtons={<SpoilerButton />}>
@@ -25,14 +25,13 @@ export default function ScorePage({ data, pageContext }) {
             </h2>
             <ScoreTable data={scores} notes={notes} />
             <ResultsTable data={scores} />
-            <ScoreFootnotes notes={notes} markdown={data?.gameMarkdown?.childMarkdownRemark?.html} />
-            <Credits data={data.gitHubImage} color="" />
+            <ScoreFootnotes notes={notes} footnotes={data.footnotes} />
           </>
         ) : (
-            <h2 id="subtitle" className="text-center mt-5">
-              Coming Soon
-            </h2>
-          )}
+          <h2 id="subtitle" className="text-center mt-5">
+            Coming Soon
+          </h2>
+        )}
         <p></p>
       </Layout>
     </SpoilerProvider>
@@ -41,7 +40,15 @@ export default function ScorePage({ data, pageContext }) {
 
 export const query = graphql`
   query($image: String!, $slug: String!) {
-    gameMarkdown: file(name: { glob: $slug }) {
+    footnotes: file(
+      name: { glob: $slug }
+      relativePath: { regex: "/footnotes/.+/" }
+      extension: { in: ["html", "md"] }
+    ) {
+      extension
+      internal {
+        content
+      }
       childMarkdownRemark {
         html
       }
@@ -49,11 +56,7 @@ export const query = graphql`
     gameImage: file(relativePath: { eq: $image }) {
       publicURL
     }
-    gitHubImage: file(relativePath: {eq: "GitHub-Mark-Light-32px.png"}) {
-      publicURL
-    }
   }
-
 `;
 
 // gameImage: file(relativePath: { eq: $image }) {
