@@ -25,7 +25,7 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
   return (
     <div className="min-vh-100 d-flex flex-column pb-4">
       <Helmet>
-        <body className={`${theme}-theme`} />
+        <body className={`themeable ${theme}-theme`} />
         <link
           href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
           rel="stylesheet"
@@ -46,7 +46,7 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
                 <>
                   <NavDropdown.Divider />
                   <NavDropdown.Item as={Link} to="/games" activeClassName="active">
-                    View All Games
+                    View Past Games
                   </NavDropdown.Item>
                 </>
               )}

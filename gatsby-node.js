@@ -8,8 +8,10 @@ exports.createPages = async ({ graphql, actions }) => {
         nodes {
           name
           slug
-          image
           theme
+          imageFile {
+            publicURL
+          }
           scores {
             id
             name
@@ -31,9 +33,9 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allGamesCsv.nodes.forEach((data, index) => {
     notes = data.scores
       ? data.scores
-        .map((node) => node.days.map((day) => day.notes))
-        .flat()
-        .filter(Boolean)
+          .map((node) => node.days.map((day) => day.notes))
+          .flat()
+          .filter(Boolean)
       : [];
     if (index === 0) {
       createPage({
@@ -63,4 +65,25 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `;
   createTypes(typeDefs);
+};
+
+exports.createResolvers = ({ createResolvers }) => {
+  createResolvers({
+    GamesCsv: {
+      imageFile: {
+        type: `File`,
+        resolve(source, args, context, info) {
+          return context.nodeModel.runQuery({
+            query: {
+              filter: {
+                relativePath: { eq: source.image },
+              },
+            },
+            type: "File",
+            firstOnly: true,
+          });
+        },
+      },
+    },
+  });
 };

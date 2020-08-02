@@ -1,36 +1,28 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { Row, Col } from "react-bootstrap";
-import splitToChunks from "../utils/splitToChunks";
+import { Card, CardColumns } from "react-bootstrap";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
-const NUMBER_OF_COLUMNS = 3;
-
-const GamesPage = ({ data }) => {
-  const columns = splitToChunks(data.allGamesCsv.nodes, NUMBER_OF_COLUMNS);
-
-  return (
-    <Layout theme="cod" variant="dark">
-      <SEO title="Games" />
-      <div id="subtitle" className="d-flex justify-content-center text-nowrap">
-        All Games
-      </div>
-      <Row className="my-3 text-center">
-        {columns.map((games, index) => (
-          <Col lg="4" sm="12" key={index}>
-            {games.map(({ name, slug }) => (
-              <Link to={`/${slug}`} className="d-block text-white" key={slug}>
-                {name}
-              </Link>
-            ))}
-          </Col>
-        ))}
-      </Row>
-    </Layout>
-  );
-};
+const GamesPage = ({ data }) => (
+  <Layout theme="medals" variant="light">
+    <SEO title="Games" />
+    <div id="subtitle" className="d-flex justify-content-center text-nowrap">
+      All Games
+    </div>
+    <CardColumns>
+      {data.allGamesCsv.nodes.map(({ imageFile, name, slug, theme }) => (
+        <Link to={`/${slug}`} className="d-block text-white" key={slug}>
+          <Card text="white" className={`themeable ${theme}-theme`}>
+            {imageFile && <Card.Img src={imageFile.publicURL} className="p-2" />}
+            <Card.Title className="text-center mt-2">{name}</Card.Title>
+          </Card>
+        </Link>
+      ))}
+    </CardColumns>
+  </Layout>
+);
 
 export const query = graphql`
   query WeeksQuery {
@@ -38,6 +30,10 @@ export const query = graphql`
       nodes {
         slug
         name
+        theme
+        imageFile {
+          publicURL
+        }
       }
     }
   }
