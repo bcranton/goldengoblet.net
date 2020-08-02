@@ -255,7 +255,7 @@ body.golf-theme {
   color: white;
   font-size: 0.75rem;
 
-  ul {
+  .footnote-content > ul {
     @extend .list-unstyled;
   }
 }
