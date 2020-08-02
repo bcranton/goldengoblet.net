@@ -19,8 +19,6 @@ const ScoreTable = ({ data, notes }) => {
     );
   }
 
-  console.log(data);
-
   return (
     <Table variant="dark" className="results table-center">
       <thead>

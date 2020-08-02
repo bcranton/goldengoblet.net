@@ -42,8 +42,8 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
                 </NavDropdown.Item>
               ))}
               <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/weeks" activeClassName="active">
-                View All Weeks
+              <NavDropdown.Item as={Link} to="/games" activeClassName="active">
+                View All Games
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/medals/" id="medalsLink" activeClassName="active">

@@ -8,19 +8,20 @@ import SEO from "../components/SEO";
 
 const NUMBER_OF_COLUMNS = 3;
 
-const WeeksPage = ({ data }) => {
+const GamesPage = ({ data }) => {
   const columns = splitToChunks(data.allGamesCsv.nodes, NUMBER_OF_COLUMNS);
+
   return (
     <Layout theme="cod" variant="dark">
-      <SEO title="Weeks" />
+      <SEO title="Games" />
       <div id="subtitle" className="d-flex justify-content-center text-nowrap">
-        All Weeks
+        All Games
       </div>
-      <Row className="my-3">
-        {columns.map((games) => (
-          <Col lg={12 / NUMBER_OF_COLUMNS} sm="12">
+      <Row className="my-3 text-center">
+        {columns.map((games, index) => (
+          <Col lg="4" sm="12" key={index}>
             {games.map(({ name, slug }) => (
-              <Link to={`/${slug}`} className="d-block text-white">
+              <Link to={`/${slug}`} className="d-block text-white" key={slug}>
                 {name}
               </Link>
             ))}
@@ -42,4 +43,4 @@ export const query = graphql`
   }
 `;
 
-export default WeeksPage;
+export default GamesPage;
