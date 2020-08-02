@@ -7,19 +7,17 @@ const ScoreFootnotes = ({ footnotes, notes }) => {
     <div id="footnote">
       {footnote_html && (
         <div
-          className="footnote-content"
+          className="mb-3 footnote-content"
           dangerouslySetInnerHTML={{
             __html: footnote_html,
           }}
         ></div>
       )}
-      <p></p>
       {notes.map((note, index) => (
-        <div key={index}>
+        <div className="mb-3" key={index}>
           {"*".repeat(index + 1)} {note}
         </div>
       ))}
-      <p></p>
     </div>
   );
 };
