@@ -15,13 +15,13 @@ const Credits = ({ variant }) => {
 
   return (
     <div>
-      <div className="row justify-content-center">
+      <div className="d-flex justify-content-center">
         <a href="https://www.reddit.com/u/AManNamedLear" class={`credit-link-${variant}`}>
           Find a mistake? Have a suggestion? Message me on Reddit! /u/AManNamedLear
         </a>
       </div>
       <p></p>
-      <div className="row justify-content-center">
+      <div className="d-flex justify-content-center">
         <a href="https://github.com/bcranton/goldengoblet.net">
           <img src={data[variant].publicURL} className="img-fluid" alt="Github Logo" />
         </a>
