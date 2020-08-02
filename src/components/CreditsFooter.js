@@ -1,28 +1,37 @@
-import React from "react"
-import Img from "gatsby-image"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
-const Credits = ({ data, color }) => {
-    const { publicURL, childImageSharp } = data
-    console.log(color)
+const Credits = ({ variant }) => {
+  const data = useStaticQuery(graphql`
+    query GithubImageQuery {
+      dark: file(relativePath: { eq: "GitHub-Mark-Light-32px.png" }) {
+        publicURL
+      }
+      light: file(relativePath: { eq: "GitHub-Mark-32px.png" }) {
+        publicURL
+      }
+    }
+  `);
 
-    return (
-        <div>
-            <div className="row justify-content-center">
-                <a href="https://www.reddit.com/u/AManNamedLear" class={"credit-link" + color}>Find a mistake? Have a suggestion?
-        Message me on Reddit! /u/AManNamedLear</a>
-            </div>
-            <p></p>
-            <div className="row justify-content-center">
-                <a href="https://github.com/bcranton/goldengoblet.net">
-                    {childImageSharp ? (
-                        <Img fluid={childImageSharp.fluid} alt="Github Logo" />
-                    ) : (
-                            <img src={publicURL} className="img-fluid" alt="Github Logo" />
-                        )}
-                </a>
-            </div>
-        </div >
-    );
+  return (
+    <div>
+      <div className="row justify-content-center">
+        <a href="https://www.reddit.com/u/AManNamedLear" class={`credit-link-${variant}`}>
+          Find a mistake? Have a suggestion? Message me on Reddit! /u/AManNamedLear
+        </a>
+      </div>
+      <p></p>
+      <div className="row justify-content-center">
+        <a href="https://github.com/bcranton/goldengoblet.net">
+          <img src={data[variant].publicURL} className="img-fluid" alt="Github Logo" />
+        </a>
+      </div>
+    </div>
+  );
 };
 
-export default Credits
+Credits.defaultProps = {
+  variant: "dark",
+};
+
+export default Credits;

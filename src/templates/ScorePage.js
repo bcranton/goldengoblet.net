@@ -9,7 +9,6 @@ import ScoreTable from "../components/ScoreTable";
 import ScoreFootnotes from "../components/ScoreFootnotes";
 import ResultsTable from "../components/ResultsTable";
 import ImageHeader from "../components/ImageHeader";
-import Credits from "../components/CreditsFooter";
 
 export default function ScorePage({ data, pageContext }) {
   const { name, notes, scores, theme } = pageContext;
@@ -27,7 +26,6 @@ export default function ScorePage({ data, pageContext }) {
             <ScoreTable data={scores} notes={notes} />
             <ResultsTable data={scores} />
             <ScoreFootnotes notes={notes} footnotes={data.footnotes} />
-            <Credits data={data.gitHubImage} color="" />
           </>
         ) : (
           <h2 id="subtitle" className="text-center mt-5">
@@ -56,9 +54,6 @@ export const query = graphql`
       }
     }
     gameImage: file(relativePath: { eq: $image }) {
-      publicURL
-    }
-    gitHubImage: file(relativePath: { eq: "GitHub-Mark-Light-32px.png" }) {
       publicURL
     }
   }

@@ -30,6 +30,8 @@ const getFootnoteContent = (footnotes) => {
       return footnotes.childMarkdownRemark.html;
     case "html":
       return footnotes.internal.content;
+    default:
+      return null;
   }
 };
 

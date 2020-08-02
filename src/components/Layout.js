@@ -3,6 +3,8 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { Helmet } from "react-helmet";
 
+import Credits from "./CreditsFooter";
+
 const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -47,7 +49,10 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
           <Nav>{navButtons}</Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Container className="pt-4">{children}</Container>
+      <Container className="py-4">
+        {children}
+        <Credits variant={variant} />
+      </Container>
     </>
   );
 };
