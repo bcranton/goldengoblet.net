@@ -1,14 +1,11 @@
 import React from "react";
 
 const ScoreFootnotes = ({ footnotes, notes }) => {
-  let footnote_html;
-  if (footnotes) {
-    footnote_html = footnotes.extension == "md" ? footnotes.childMarkdownRemark.html : footnotes.internal.content;
-  }
+  let footnote_html = getFootnoteContent(footnotes);
 
   return (
     <div id="footnote">
-      {footnotes && (
+      {footnote_html && (
         <div
           className="footnote-content"
           dangerouslySetInnerHTML={{
@@ -25,6 +22,15 @@ const ScoreFootnotes = ({ footnotes, notes }) => {
       <p></p>
     </div>
   );
+};
+
+const getFootnoteContent = (footnotes) => {
+  switch (footnotes?.extension) {
+    case "md":
+      return footnotes.childMarkdownRemark.html;
+    case "html":
+      return footnotes.internal.content;
+  }
 };
 
 export default ScoreFootnotes;
