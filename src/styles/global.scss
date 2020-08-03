@@ -35,14 +35,15 @@
   src: url("./fonts/Pretendo.ttf") format("truetype");
 }
 
-body {
+body,
+.themeable {
   background-color: #202020;
   #subtitle {
     color: #d4af37;
   }
 }
 
-body.medals-theme {
+.themeable.medals-theme {
   background-color: #d4af37;
 
   #subtitle {
@@ -52,7 +53,7 @@ body.medals-theme {
   }
 }
 
-body.spelunky-theme {
+.themeable.spelunky-theme {
   background-color: #000419;
 
   #subtitle {
@@ -63,7 +64,7 @@ body.spelunky-theme {
   }
 }
 
-body.tarkov-theme {
+.themeable.tarkov-theme {
   background-color: #1a1a1a;
 
   #subtitle {
@@ -74,7 +75,7 @@ body.tarkov-theme {
   }
 }
 
-body.hitman-theme {
+.themeable.hitman-theme {
   background-color: #28050b;
 
   #subtitle {
@@ -86,7 +87,7 @@ body.hitman-theme {
   }
 }
 
-body.hitman2-theme {
+.themeable.hitman2-theme {
   background-color: #4c1922;
 
   #subtitle {
@@ -98,7 +99,7 @@ body.hitman2-theme {
   }
 }
 
-body.pubg-theme {
+.themeable.pubg-theme {
   #subtitle {
     font-family: "hl45";
     font-size: 4rem;
@@ -106,7 +107,7 @@ body.pubg-theme {
   }
 }
 
-body.spire-theme {
+.themeable.spire-theme {
   background-color: #001b21;
 
   #subtitle {
@@ -116,7 +117,7 @@ body.spire-theme {
   }
 }
 
-body.sega-theme {
+.themeable.sega-theme {
   background-color: #000419;
 
   #subtitle {
@@ -126,7 +127,7 @@ body.sega-theme {
   }
 }
 
-body.nintendo-theme {
+.themeable.nintendo-theme {
   #subtitle {
     font-family: "Pretendo";
     font-size: 4rem;
@@ -134,7 +135,7 @@ body.nintendo-theme {
   }
 }
 
-body.snes-theme {
+.themeable.snes-theme {
   #subtitle {
     font-size: 4rem;
     font-weight: bold;
@@ -144,7 +145,7 @@ body.snes-theme {
   }
 }
 
-body.escape-theme {
+.themeable.escape-theme {
   background-color: #4c1922;
 
   #subtitle {
@@ -156,7 +157,7 @@ body.escape-theme {
   }
 }
 
-body.guts-theme {
+.themeable.guts-theme {
   background-color: #1b2631;
 
   #subtitle {
@@ -168,7 +169,7 @@ body.guts-theme {
   }
 }
 
-body.mario-theme {
+.themeable.mario-theme {
   background-color: #323232;
 
   #subtitle {
@@ -180,7 +181,7 @@ body.mario-theme {
   }
 }
 
-body.smb-theme {
+.themeable.smb-theme {
   background-color: #202020;
 
   #subtitle {
@@ -192,7 +193,7 @@ body.smb-theme {
   }
 }
 
-body.cod-theme {
+.themeable.cod-theme {
   #subtitle {
     font-size: 3rem;
     font-weight: bold;
@@ -202,7 +203,7 @@ body.cod-theme {
   }
 }
 
-body.golf-theme {
+.themeable.golf-theme {
   background-color: #202020;
 
   #subtitle {
@@ -310,12 +311,16 @@ a:hover {
   font-size: 1.25rem;
 }
 
-#medalsLink:not(.active) {
-  color: #d4af37;
+.themeable.medals-theme {
+  #medalsLink.active {
+    color: white;
+  }
 }
 
-#medalsLink.active {
-  color: white;
+.themeable:not(.medals-theme) {
+  #medalsLink:not(.active) {
+    color: #d4af37;
+  }
 }
 
 .table-center td,

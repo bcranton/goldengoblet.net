@@ -7,24 +7,25 @@ import Credits from "./CreditsFooter";
 
 const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query LayoutQuery {
       site {
         siteMetadata {
           title
         }
       }
-      allGamesCsv {
+      allGamesCsv(limit: 5) {
         nodes {
           slug
           name
         }
+        totalCount
       }
     }
   `);
   return (
-    <>
+    <div className="min-vh-100 d-flex flex-column pb-4">
       <Helmet>
-        <body className={`${theme}-theme`} />
+        <body className={`themeable ${theme}-theme`} />
         <link
           href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
           rel="stylesheet"
@@ -41,6 +42,14 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
                   {name}
                 </NavDropdown.Item>
               ))}
+              {data.allGamesCsv.totalCount > 5 && (
+                <>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item as={Link} to="/games" activeClassName="active">
+                    View Past Games
+                  </NavDropdown.Item>
+                </>
+              )}
             </NavDropdown>
             <Nav.Link as={Link} to="/medals/" id="medalsLink" activeClassName="active">
               Medals
@@ -49,11 +58,9 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
           <Nav>{navButtons}</Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Container className="py-4">
-        {children}
-        <Credits variant={variant} />
-      </Container>
-    </>
+      <Container className="py-4 flex-grow-1">{children}</Container>
+      <Credits variant={variant} />
+    </div>
   );
 };
 

@@ -11,13 +11,13 @@ import ResultsTable from "../components/ResultsTable";
 import ImageHeader from "../components/ImageHeader";
 
 export default function ScorePage({ data, pageContext }) {
-  const { name, notes, scores, theme } = pageContext;
+  const { name, notes, scores, theme, imageFile } = pageContext;
 
   return (
     <SpoilerProvider>
       <Layout currentGame={name} theme={theme} navButtons={<SpoilerButton />}>
         <SEO title={name} />
-        <ImageHeader data={data.gameImage} alt={`${name} Logo`} />
+        <ImageHeader data={imageFile} alt={`${name} Logo`} />
         {scores ? (
           <>
             <h2 id="subtitle" className="text-center text-nowrap my-2">
@@ -39,7 +39,7 @@ export default function ScorePage({ data, pageContext }) {
 }
 
 export const query = graphql`
-  query($image: String!, $slug: String!) {
+  query($slug: String!) {
     footnotes: file(
       name: { glob: $slug }
       relativePath: { regex: "/footnotes/.+/" }
@@ -52,9 +52,6 @@ export const query = graphql`
       childMarkdownRemark {
         html
       }
-    }
-    gameImage: file(relativePath: { eq: $image }) {
-      publicURL
     }
   }
 `;

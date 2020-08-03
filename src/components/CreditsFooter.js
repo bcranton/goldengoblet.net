@@ -16,7 +16,7 @@ const Credits = ({ variant }) => {
   return (
     <div>
       <div className="d-flex justify-content-center">
-        <a href="https://www.reddit.com/u/AManNamedLear" class={`credit-link-${variant}`}>
+        <a href="https://www.reddit.com/u/AManNamedLear" className={`credit-link-${variant}`}>
           Find a mistake? Have a suggestion? Message me on Reddit! /u/AManNamedLear
         </a>
       </div>
