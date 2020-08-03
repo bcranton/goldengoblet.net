@@ -20,7 +20,7 @@ const ScoreTable = ({ data, notes }) => {
   }
 
   return (
-    <Table variant="dark" className="results table-center">
+    <Table responsive variant="dark" className="results table-center">
       <thead>
         <tr>
           <th scope="col">Viewsync</th>

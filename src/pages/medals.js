@@ -19,7 +19,7 @@ const MedalsPage = ({ data }) => {
       <div id="subtitle" className="d-flex justify-content-center text-nowrap">
         Golden Goblet
       </div>
-      <Table variant="dark" borderless>
+      <Table variant="dark" borderless responsive>
         <thead className="table-center">
           <tr>
             {data.scores.group.map(({ name, nodes }) => (

@@ -4,7 +4,7 @@ import ResultsRow from "./ResultsRow";
 
 const ResultsTable = ({ data }) => {
   return (
-    <Table variant="dark" className="table-center">
+    <Table variant="dark" className="table-center" responsive>
       <thead>
         <tr>
           <th scope="col">Totals</th>
