@@ -59,7 +59,9 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
         </Navbar.Collapse>
       </Navbar>
       <Container className="py-4 flex-grow-1">{children}</Container>
-      <Credits variant={variant} />
+      <Container>
+        <Credits variant={variant} />
+      </Container>
     </div>
   );
 };
