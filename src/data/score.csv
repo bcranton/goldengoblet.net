@@ -1,7 +1,7 @@
 slug,name,days.1.score,days.1.place,days.1.youtube,days.1.name,days.1.notes,days.2.score,days.2.place,days.2.youtube,days.2.name,days.2.notes,days.3.score,days.3.place,days.3.youtube,days.3.name,days.3.notes,days.4.score,days.4.place,days.4.youtube,days.4.name,days.4.notes,days.5.score,days.5.place,days.5.youtube,days.5.name,days.5.notes,days.6.score,days.6.place,days.6.youtube,days.6.name,days.6.notes,days.7.score,days.7.place,days.7.youtube,days.7.name,days.7.notes
-pga2,Dan Gheesling,-1,third,41VS4-vr_go,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-pga2,Michael Al Fox,-5,first,Nrf2sIv5p1E,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-pga2,Northernlion,-4,second,IvdgL4sW5PY,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pga2,Dan Gheesling,-1,third,41VS4-vr_go,,,-6 (-4),first,aBttQrACWT8,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pga2,Michael Al Fox,-5,first,Nrf2sIv5p1E,,,-4,second,foi0FQYyXc0,,,,,,,,,,,,,,,,,,,,,,,,,,,
+pga2,Northernlion,-4,second,IvdgL4sW5PY,,,-1 (+0),third,luLBf24p0gI,,,,,,,,,,,,,,,,,,,,,,,,,,,
 pga,Dan Gheesling,+5,second,QOjf1iQiYD8,,,+1,second,GUS2UME68Aw,,,+3,third,XeTkPEiUtg0,,,-1,third,mD9LHWd9CT4,,,-1,second,0AO0DJ1h_Is,,,-6,second,Fnu-b8RfOS0,,,+1,third,foIXVTC9CUo,,
 pga,Michael Al Fox,+4,first,xyH-B4NU_7M,,,+3,third,QpKZnKuYuFY,,,-2,first,MIQRvSu7OYY,,,-5,first,mlXUP04JOAQ,,,-6,first,tRRzm777qdw,,,-8,first,KZa3v8h5rUs,,,-5,first,_9AWfqoex8E,,
 pga,Northernlion,+5,second,UaRat4ilXbw,,,+0,first,7RoH2_PkIXo,,,+1,second,2b8S-03VkSA,,,-2,second,wPp8C8Vp8Xc,,,+3,third,ZM93S8Wydac,,,-3,third,3-2rmb9gX_o,,,-2,second,7-7l64OV9Pw,,
