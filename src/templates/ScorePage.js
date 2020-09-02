@@ -11,7 +11,7 @@ import ResultsTable from "../components/ResultsTable";
 import ImageHeader from "../components/ImageHeader";
 
 export default function ScorePage({ data, pageContext }) {
-  const { name, notes, scores, theme, imageFile } = pageContext;
+  const { name, notes, scores, winner, theme, imageFile } = pageContext;
 
   return (
     <SpoilerProvider>
@@ -24,7 +24,7 @@ export default function ScorePage({ data, pageContext }) {
               Golden Goblet
             </h2>
             <ScoreTable data={scores} notes={notes} />
-            <ResultsTable data={scores} />
+            <ResultsTable data={scores} winner={winner} />
             <ScoreFootnotes notes={notes} footnotes={data.footnotes} />
           </>
         ) : (
@@ -55,12 +55,3 @@ export const query = graphql`
     }
   }
 `;
-
-// gameImage: file(relativePath: { eq: $image }) {
-//   publicURL
-//   childImageSharp {
-//     fluid(maxWidth: 840, maxHeight: 190) {
-//       ...GatsbyImageSharpFluid
-//     }
-//   }
-// }
