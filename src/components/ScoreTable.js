@@ -6,7 +6,12 @@ import ViewsyncLink from "./ViewsyncLink";
 
 const ScoreTable = ({ data, notes }) => {
   let rows = [];
-  for (let day = 0; day < data[0].days.length; day++) {
+  const maxDays = data.reduce(
+    (max, contestant) =>
+      Math.max(contestant.days.filter((day) => day.score).length, max),
+    0
+  );
+  for (let day = 0; day < maxDays; day++) {
     rows.push(
       <tr key={day}>
         <th scope="row">
@@ -26,7 +31,13 @@ const ScoreTable = ({ data, notes }) => {
           <th scope="col">Viewsync</th>
           {data.map(({ id, name, youtube }) => (
             <th scope="col" key={id}>
-              {youtube ? <a href={`https://www.youtube.com/user/${youtube.channel}`}>{name}</a> : name}
+              {youtube ? (
+                <a href={`https://www.youtube.com/user/${youtube.channel}`}>
+                  {name}
+                </a>
+              ) : (
+                name
+              )}
             </th>
           ))}
         </tr>
