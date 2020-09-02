@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Table } from "react-bootstrap";
-import ResultsRow from "./ResultsRow";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ResultsTable = ({ data }) => {
+import ResultsRow from "./ResultsRow";
+import SpoilerContext from "../context/SpoilerContext";
+
+const ResultsTable = ({ data, winner }) => {
+  const { showSpoilers } = useContext(SpoilerContext);
+
   return (
     <Table variant="dark" className="table-center" responsive>
       <thead>
@@ -11,6 +16,9 @@ const ResultsTable = ({ data }) => {
           {data.map((score) => (
             <th scope="col" key={score.id}>
               {score.name}
+              {showSpoilers && score.name === winner && (
+                <FontAwesomeIcon icon="trophy" className="results-winner" />
+              )}
             </th>
           ))}
         </tr>

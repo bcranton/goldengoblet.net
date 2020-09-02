@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allGamesCsv {
         nodes {
           name
+          winner
           slug
           theme
           imageFile {
