@@ -26,7 +26,7 @@ const Layout = ({ theme, currentGame, navButtons, variant, children }) => {
     <div className="min-vh-100 d-flex flex-column pb-4">
       <div>
         <div class="header">
-          <p><span role="img" aria-label="Baby emoji">👶</span> Congratulations Kate and Ryan! <span role="img" aria-label="Baby emoji">🎉🥳</span></p>
+          <p><span role="img" aria-label="Baby emoji">👶</span> Congratulations Kate and Ryan! <span role="img" aria-label="party emojis">🎉🥳</span></p>
         </div>
       </div>
       <Helmet>
