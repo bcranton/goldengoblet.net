@@ -35,7 +35,7 @@ exports.createPages = async ({ graphql, actions }) => {
     notes = data.scores
       ? data.scores
         .map((node) => node.days.map((day) => day.notes))
-        // .flat()
+        .flat()
         .filter(Boolean)
       : [];
     if (index === 0) {
